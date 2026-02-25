@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { HiUser } from "react-icons/hi";
+import Image from "next/image";
 
 const stats = [
   { label: "Proyectos", value: "6+" },
@@ -29,13 +29,15 @@ export default function AboutSection() {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="h-72 w-72 overflow-hidden rounded-2xl border-2 border-border bg-surface-light">
-                <div className="flex h-full items-center justify-center text-text-secondary">
-                  <div className="text-center">
-                    <HiUser className="mx-auto mb-2 text-6xl text-primary/30" />
-                    <p className="text-sm">Foto de perfil</p>
-                  </div>
-                </div>
+              <div className="h-72 w-72 overflow-hidden rounded-2xl border-2 border-border">
+                <Image
+                  src="/foto-perfil.jpeg"
+                  alt="Jesner Melgara"
+                  width={288}
+                  height={288}
+                  className="h-full w-full object-cover object-top"
+                  priority
+                />
               </div>
               {/* Decorative border */}
               <div className="absolute -bottom-3 -right-3 -z-10 h-72 w-72 rounded-2xl border-2 border-primary/30" />

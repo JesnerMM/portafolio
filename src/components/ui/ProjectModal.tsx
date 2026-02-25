@@ -51,7 +51,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-border bg-surface"
+            className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-2xl border border-border bg-surface"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -64,7 +64,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </button>
 
             {/* Carousel */}
-            <ImageCarousel images={project.images} title={project.title} />
+            <ImageCarousel
+              groups={project.imageGroups}
+              title={project.title}
+              restricted={project.imagesRestricted}
+            />
 
             {/* Content */}
             <div className="p-6">

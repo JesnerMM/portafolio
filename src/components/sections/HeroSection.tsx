@@ -94,7 +94,8 @@ export default function HeroSection() {
             Ver Proyectos
           </a>
           <a
-            href="/cv.pdf"
+            href="/Jesner-Melgara-CV.pdf"
+            download
             target="_blank"
             className="flex items-center gap-2 rounded-lg border border-primary px-6 py-3 font-medium text-primary transition-all hover:bg-primary/10"
           >

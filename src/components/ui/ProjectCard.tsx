@@ -3,7 +3,8 @@
 import { motion } from "motion/react";
 import { Project } from "@/types";
 import TechBadge from "./TechBadge";
-import { HiEye } from "react-icons/hi";
+import { HiEye, HiLockClosed } from "react-icons/hi";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,14 +21,26 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
       className="group cursor-pointer overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.1)]"
       onClick={() => onOpen(project)}
     >
-      {/* Thumbnail placeholder */}
+      {/* Thumbnail */}
       <div className="relative aspect-video overflow-hidden bg-surface-light">
-        <div className="flex h-full items-center justify-center text-text-secondary">
-          <div className="text-center">
-            <HiEye className="mx-auto mb-2 text-3xl text-primary/50" />
-            <span className="text-sm">Vista previa</span>
+        {project.imagesRestricted || project.imageGroups.length === 0 ? (
+          <div className="flex h-full items-center justify-center text-text-secondary">
+            <div className="text-center">
+              <HiLockClosed className="mx-auto mb-2 text-3xl text-primary/30" />
+              <span className="text-xs text-text-secondary">
+                Imagenes restringidas
+              </span>
+            </div>
           </div>
-        </div>
+        ) : (
+          <Image
+            src={project.imageGroups[0].images[0]}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 400px"
+          />
+        )}
         <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-background">
             Ver Detalles
