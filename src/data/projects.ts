@@ -234,7 +234,7 @@ export const projects: Project[] = [
   },
   {
     id: "cupones-online",
-    title: "Cupones Online",
+    title: "Sistema de Venta de Cupones Online",
     shortDescription:
       "Plataforma de cupones de descuento con panel web en React, dos APIs en .NET 8 y PHP, y app móvil híbrida en Ionic/Angular para el canje de cupones.",
     fullDescription:
