@@ -1,0 +1,79 @@
+\documentclass{resume}
+
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{Jesner Eliecer Melgara Murillo}
+\address{+506 87521680 \\ Juan Viñas, Jiménez, Cartago}
+\address{\href{mailto:eliecermelgara1680@gmail.com}{eliecermelgara1680@gmail.com} \\ \href{https://www.linkedin.com/in/jesner-eliecer-melgara-murillo-0b4506255/}{linkedin.com/jesner} \\ \href{https://jesnermelgara.dev}{jesnermelgara.dev}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Perfil Profesional}
+Desarrollador Full Stack con pasantía en CyberPro CR, participando en tres sistemas empresariales activos para clientes corporativos. Manejo de Vue~3, Flutter, Next.js, Express.js y .NET~8. Conocimiento en Clean Architecture, DDD, principios SOLID y metodologías ágiles (SCRUM, RUP). Egresado de Informática Empresarial (UCR) en proceso de graduación.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Experiencia Profesional}
+
+\textbf{Desarrollador Full Stack --- CyberPro CR} \hfill {11 Agosto 2025 --- 20 Febrero 2026}\\
+\textit{Pasantía Profesional} \vspace{0.5em}
+
+\textbf{Routify TMS} \hfill \textit{Cliente: AVON}\\
+\textit{Vue 3 · Flutter · Express · TypeScript · Prisma · MySQL · AWS S3}\\
+Desarrollé íntegramente la app móvil Flutter migrando desde datos mockeados a integración real con el backend: flujos de autenticación, ciclo de entrega (check-in, parcial, rechazos), captura de evidencia fotográfica y firma digital en AWS~S3, cobros múltiples (efectivo, tarjeta, SINPE) y arquitectura offline-first con Drift/SQLite. Optimicé módulos de liquidación en 3~niveles, monitoreo GPS en tiempo real y reportes en el panel web (Vue~3). \vspace{0.4em}
+
+\textbf{OCR Aeromar}\\
+\textit{Next.js · Express · TypeScript · Prisma · MySQL}\\
+Diseñé e implementé la arquitectura completa del sistema desde cero: modelado de base de datos, API REST en Express/TypeScript, frontend Next.js, autenticación JWT firmado con RSA-2048 y cookies HttpOnly, y modelo RBAC con protección de rutas en frontend y backend. \vspace{0.4em}
+
+\textbf{FACONTPOS --- Facturación Electrónica y POS}\\
+\textit{Next.js · Express · TypeScript · Prisma · MySQL}\\
+Desarrollé full stack más de 8 módulos: integración con la API del Ministerio de Hacienda, proformas con variantes y códigos CABYS, facturación sin caja abierta, apartados con historial de pagos parciales, precios diferenciados por sucursal y exportación de inventario a Excel.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Proyectos Académicos}
+\textit{Universidad de Costa Rica} \vspace{0.5em}
+
+\textbf{Solitel --- Gestión de Solicitudes Judiciales (OIJ)}\\
+\textit{Angular · .NET 8 · EF Core · SQL Server}\\
+Clean Architecture de 5~capas, RBAC de 6~roles con flujos de aprobación multi-nivel, requerimientos levantados directamente con el OIJ bajo metodología RUP. \vspace{0.4em}
+
+\textbf{Sistema de Venta de Cupones Online}\\
+\textit{React · .NET 8 · PHP · Ionic · MySQL · SQL Server}\\
+Tres capas de frontend/backend en paralelo: panel React, APIs en .NET~8 (Clean Architecture) y PHP (capas), y app móvil Ionic/Angular con Capacitor y geolocalización. \vspace{0.4em}
+
+\textbf{Sistema de Gestión Hotelera}\\
+\textit{Angular 18 · .NET 8 · EF Core · SQL Server}\\
+Arquitectura DDD de 4~capas, wizard de reservaciones multi-paso, exportación a PDF (jsPDF), CMS integrado y Google Maps API.
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\newpage
+
+\begin{rSection}{Habilidades Técnicas}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Frontend           & React, Next.js, Angular, Vue~3, TypeScript, JavaScript, TailwindCSS, Ionic, Flutter \\[0.4em]
+Backend            & Node.js, Express.js, .NET~8/C\#, PHP, Prisma ORM, Entity Framework Core \\[0.4em]
+Bases de Datos     & MySQL, SQL Server, SQLite, MongoDB \\[0.4em]
+Cloud \& Servicios & AWS S3, Firebase (FCM), Google Maps API \\[0.4em]
+Herramientas       & Git, GitHub, Docker, Postman, Swagger, SCRUM, RUP, Clean Architecture, DDD, SOLID \\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Educación}
+
+\textbf{Bachillerato en Informática Empresarial} \hfill {2021 --- 2025}\\
+Universidad de Costa Rica, Sede del Atlántico \hfill \textit{En proceso de graduación}
+
+\end{rSection}
+
+\end{document}

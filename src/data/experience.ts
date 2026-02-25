@@ -15,14 +15,14 @@ export const experiences: ExperienceItem[] = [
   {
     company: "CyberPro CR",
     role: "Desarrollador Full Stack",
-    period: "2024 - Presente",
+    period: "Ago 2025 — Feb 2026",
     description:
-      "Desarrollo de sistemas empresariales completos para clientes corporativos, abarcando backend, frontend web y aplicaciones moviles con tecnologias modernas y metodologias agiles.",
+      "Pasantía profesional en CyberPro CR, empresa costarricense de desarrollo de software. Trabajé en tres proyectos empresariales activos, asumiendo responsabilidades full stack en backend, frontend web y desarrollo de aplicaciones móviles con Flutter.",
     achievements: [
-      "Desarrollo de Routify TMS - sistema de gestion de transporte con panel web (Vue 3), API REST (Express) y app movil (Flutter) con GPS en tiempo real, modo offline y liquidacion financiera. 32 modelos de BD, 20 endpoints, 23 servicios.",
-      "Arquitectura e implementacion completa del sistema OCR para Aeromar - autenticacion JWT con RSA, modelo RBAC, flujo de aceptacion avanzada de documentos y CRUD de usuarios con validaciones robustas.",
-      "Desarrollo full stack de +8 modulos en FACONTPOS - facturacion electronica con API del Ministerio de Hacienda, proformas con variantes, apartados con historial de pagos, codigos CABYS y precios diferenciados por sucursal.",
-      "Implementacion de arquitecturas escalables con multiples stacks tecnologicos y servicios en la nube (AWS S3, Firebase).",
+      "Routify TMS (cliente AVON): conecté la app Flutter con el backend real (migración desde datos mockeados), implementé los flujos completos de entrega, captura de evidencia fotográfica y firma digital en AWS S3, cobros múltiples y sincronización offline-first. Optimicé los módulos web de liquidación, monitoreo GPS y reportes.",
+      "OCR Aeromar: diseñé e implementé la arquitectura completa del sistema desde cero — modelado de BD con Prisma, API REST en Express/TypeScript, frontend en Next.js, autenticación JWT con RSA-2048 y modelo RBAC con protección de rutas en frontend y backend.",
+      "FACONTPOS: desarrollé full stack más de 8 módulos del sistema de facturación electrónica, incluyendo integración con la API del Ministerio de Hacienda, proformas con códigos CABYS, apartados con historial de pagos, precios diferenciados por sucursal y exportación de inventario a Excel.",
+      "Trabajo bajo metodología SCRUM con entregas iterativas, uso de herramientas colaborativas (Trello, Slack) y desarrollo con múltiples stacks tecnológicos en paralelo.",
     ],
     technologies: [
       { name: "Vue 3", icon: SiVuedotjs, color: "#4FC08D" },

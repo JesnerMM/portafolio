@@ -1,8 +1,14 @@
 import { IconType } from "react-icons";
+import { StaticImageData } from "next/image";
 
 export interface NavLink {
   label: string;
   href: string;
+}
+
+export interface ImageGroup {
+  label: string;
+  images: StaticImageData[];
 }
 
 export interface Project {
@@ -13,7 +19,8 @@ export interface Project {
   category: "profesional" | "academico";
   technologies: TechItem[];
   features: string[];
-  images: string[];
+  imageGroups: ImageGroup[];
+  imagesRestricted?: boolean;
   liveUrl?: string;
   repoUrl?: string;
 }
