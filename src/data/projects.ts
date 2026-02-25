@@ -138,7 +138,7 @@ export const projects: Project[] = [
   },
   {
     id: "ocr-aeromar",
-    title: "OCR Aeromar",
+    title: "Sistema de Lectura de Datos mediante OCR Inteligente",
     shortDescription:
       "Plataforma de digitalización documental desarrollada desde cero para Aeromar, con interfaz web completa, autenticación RSA-JWT y control de acceso por roles.",
     fullDescription:
