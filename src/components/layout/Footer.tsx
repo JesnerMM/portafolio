@@ -25,7 +25,7 @@ export default function Footer() {
               <SiGithub className="text-xl" />
             </a>
             <a
-              href="https://linkedin.com/in/jesnermelgara"
+              href="https://www.linkedin.com/in/jesner-eliecer-melgara-murillo-0b4506255/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary transition-colors hover:text-primary"
