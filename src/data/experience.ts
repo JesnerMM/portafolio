@@ -15,9 +15,9 @@ export const experiences: ExperienceItem[] = [
   {
     company: "CyberPro CR",
     role: "Desarrollador Full Stack",
-    period: "Ago 2025 — Feb 2026",
+    period: "Ene 2025 — Feb 2026",
     description:
-      "Pasantía profesional en CyberPro CR, empresa costarricense de desarrollo de software. Trabajé en tres proyectos empresariales activos, asumiendo responsabilidades full stack en backend, frontend web y desarrollo de aplicaciones móviles con Flutter.",
+      "Desarrollador FullStack en CyberPro CR, empresa costarricense de desarrollo de software. Trabajé en tres proyectos empresariales activos, asumiendo responsabilidades full stack en backend, frontend web y desarrollo de aplicaciones móviles con Flutter.",
     achievements: [
       "Routify TMS (cliente AVON): conecté la app Flutter con el backend real (migración desde datos mockeados), implementé los flujos completos de entrega, captura de evidencia fotográfica y firma digital en AWS S3, cobros múltiples y sincronización offline-first. Optimicé los módulos web de liquidación, monitoreo GPS y reportes.",
       "Sistema de Lectura de Datos mediante OCR Inteligente (cliente Aeromar): diseñé e implementé la arquitectura completa del sistema desde cero — modelado de BD con Prisma, API REST en Express/TypeScript, frontend en Next.js, autenticación JWT con RSA-2048 y modelo RBAC con protección de rutas en frontend y backend.",

@@ -28,6 +28,7 @@ import {
   SiFigma,
   SiTrello,
   SiSwagger,
+  SiPostgresql,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { HiServer, HiDatabase, HiCode, HiCog } from "react-icons/hi";
@@ -65,15 +66,16 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Bases de Datos",
-    icon: HiDatabase,
-    skills: [
-      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
-      { name: "SQL Server", icon: HiDatabase, color: "#CC2927" },
-      { name: "SQLite", icon: SiSqlite, color: "#003B57" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-    ],
-  },
+  title: "Bases de Datos",
+  icon: HiDatabase,
+  skills: [
+    { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+    { name: "SQL Server", icon: HiDatabase, color: "#CC2927" },
+    { name: "SQLite", icon: SiSqlite, color: "#003B57" },
+    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  ],
+},
   {
     title: "Herramientas",
     icon: HiCog,

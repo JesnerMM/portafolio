@@ -30,7 +30,7 @@ const contactInfo = [
   {
     icon: HiLocationMarker,
     label: "Ubicacion",
-    value: "Juan Viñas, Cartago, Costa Rica",
+    value: "Cartago, Costa Rica",
   },
   {
     icon: SiLinkedin,
