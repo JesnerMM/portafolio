@@ -12,14 +12,14 @@ export const translations = {
       { label: "Contact", href: "#contacto" },
     ],
     hero: {
-      badge: "CPIC Member • Available for senior roles",
+      badge: "CPIC Member • Open to engineering opportunities",
       hello: "Hello, my name is",
       intro:
         "Full Stack Software Engineer focused on event-driven architectures, high-availability backend systems, fintech integrations, and Web3 / Stellar solutions for critical enterprise environments.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Download CV",
       coreFocus: "Core focus",
-      seniorProfile: "Senior profile",
+      seniorProfile: "Engineer profile",
       selectedStack: "Selected stack",
       statLabels: ["Years", "Critical systems", "Membership"],
       statValues: ["1+", "6+", "CPIC"],
@@ -124,14 +124,14 @@ export const translations = {
       { label: "Contacto", href: "#contacto" },
     ],
     hero: {
-      badge: "Miembro de CPIC • Disponible para roles senior",
+      badge: "Miembro de CPIC • Abierto a oportunidades de ingeniería",
       hello: "Hola, mi nombre es",
       intro:
         "Ingeniero de software Full Stack enfocado en arquitecturas orientadas a eventos, sistemas backend de alta disponibilidad, integraciones fintech y soluciones Web3 / Stellar para entornos empresariales críticos.",
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Descargar CV",
       coreFocus: "Enfoque principal",
-      seniorProfile: "Perfil senior",
+      seniorProfile: "Perfil de ingeniero",
       selectedStack: "Stack seleccionado",
       statLabels: ["Años", "Sistemas críticos", "Membresía"],
       statValues: ["1+", "6+", "CPIC"],
