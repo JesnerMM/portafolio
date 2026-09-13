@@ -3,14 +3,17 @@
 import { motion } from "motion/react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { skillCategories } from "@/data/skills";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="habilidades" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Skills"
-          subtitle="Technologies and tools I work with"
+          title={t.skills.title}
+          subtitle={t.skills.subtitle}
         />
 
         <div className="grid gap-6 md:grid-cols-2">

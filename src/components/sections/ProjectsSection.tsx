@@ -8,15 +8,13 @@ import ProjectModal from "@/components/ui/ProjectModal";
 import { projects } from "@/data/projects";
 import { Project } from "@/types";
 import { cn } from "@/lib/utils";
-
-const filters = [
-  { label: "All", value: "todos" },
-  { label: "Professional", value: "profesional" },
-] as const;
-
-type FilterValue = (typeof filters)[number]["value"];
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function ProjectsSection() {
+  const { t } = useLanguage();
+  const filters = t.projects.filters;
+  type FilterValue = (typeof filters)[number]["value"];
+
   const [activeFilter, setActiveFilter] = useState<FilterValue>("todos");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -29,11 +27,10 @@ export default function ProjectsSection() {
     <section id="proyectos" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Key Engineering Projects"
-          subtitle="Selected work across distributed systems, fintech, and enterprise platforms"
+          title={t.projects.title}
+          subtitle={t.projects.subtitle}
         />
 
-        {/* Filters */}
         <div className="mb-8 flex justify-center gap-2">
           {filters.map((filter) => (
             <button
@@ -51,7 +48,6 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Grid */}
         <motion.div layout className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
@@ -64,7 +60,6 @@ export default function ProjectsSection() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Modal */}
         <ProjectModal
           project={selectedProject}
           onClose={() => setSelectedProject(null)}

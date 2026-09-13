@@ -2,27 +2,27 @@
 
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { navLinks } from "@/data/navigation";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
 import { HiMenu, HiTranslate, HiX } from "react-icons/hi";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [language, setLanguage] = useState<"en" | "es">("en");
+  const { language, setLanguage, t } = useLanguage();
   const { scrollDirection, scrollY } = useScrollDirection();
 
+  const navLinks = t.nav;
   const sectionIds = useMemo(
     () => navLinks.map((l) => l.href.replace("#", "")),
-    []
+    [navLinks]
   );
   const activeSection = useActiveSection(sectionIds);
 
   const isScrolled = scrollY > 50;
   const isHidden = scrollDirection === "down" && scrollY > 200 && !mobileOpen;
 
-  // Refs for measuring nav link positions
   const navRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
   const ulRef = useRef<HTMLUListElement>(null);
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
@@ -45,11 +45,14 @@ export default function Navbar() {
     updateIndicator();
   }, [updateIndicator]);
 
-  // Recalculate on resize
   useEffect(() => {
     window.addEventListener("resize", updateIndicator);
     return () => window.removeEventListener("resize", updateIndicator);
   }, [updateIndicator]);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "es" : "en");
+  };
 
   return (
     <motion.header
@@ -64,14 +67,12 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        {/* Logo */}
         <a href="#inicio" className="text-xl font-bold">
           <span className="text-primary">&lt;</span>
           JM
           <span className="text-primary">/&gt;</span>
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden items-center gap-3 md:flex">
           <ul ref={ulRef} className="relative hidden items-center gap-1 md:flex">
             {navLinks.map((link) => {
@@ -96,7 +97,6 @@ export default function Navbar() {
                 </li>
               );
             })}
-            {/* Single indicator that slides horizontally */}
             <motion.div
               className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-primary"
               animate={{
@@ -135,6 +135,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 md:hidden">
           <button
+            onClick={toggleLanguage}
             className="flex items-center gap-1 rounded-full border border-border bg-surface/80 px-2 py-1 text-[11px] font-semibold text-text-secondary shadow-[0_0_0_1px_rgba(15,23,42,0.4)] backdrop-blur-sm"
             aria-label="Language selector"
           >
@@ -156,7 +157,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

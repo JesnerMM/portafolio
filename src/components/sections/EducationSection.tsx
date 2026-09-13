@@ -4,14 +4,17 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { HiAcademicCap } from "react-icons/hi";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function EducationSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="educacion" className="px-4 py-20">
       <div className="mx-auto max-w-3xl">
         <SectionTitle
-          title="Education"
-          subtitle="My academic background"
+          title={t.education.title}
+          subtitle={t.education.subtitle}
         />
 
         <motion.div
@@ -33,18 +36,15 @@ export default function EducationSection() {
                 </h3>
 
                 <p className="mt-1 text-lg text-primary">
-                  Business Informatics Bachelor's Degree
+                  {t.education.degreeTitle}
                 </p>
 
                 <p className="mt-2 text-sm uppercase tracking-[0.18em] text-text-secondary">
-                  2021 - 2025
+                  {t.education.period}
                 </p>
 
                 <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                  Comprehensive training in software development, database design,
-                  requirements engineering, IT project management, and business
-                  administration, with a focus on technology solutions for the
-                  enterprise sector.
+                  {t.education.description}
                 </p>
               </div>
             </div>

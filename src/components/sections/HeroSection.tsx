@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const roles = [
   "Full Stack Software Engineer | Web3 & Distributed Systems",
@@ -11,6 +12,7 @@ const roles = [
 ];
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -62,7 +64,7 @@ export default function HeroSection() {
               className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-primary"
             >
               <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.7)]" />
-              CPIC Member • Available for senior roles
+              {t.hero.badge}
             </motion.div>
 
             <motion.p
@@ -71,7 +73,7 @@ export default function HeroSection() {
               transition={{ delay: 0.3 }}
               className="mb-4 font-mono text-sm text-primary"
             >
-              Hello, my name is
+              {t.hero.hello}
             </motion.p>
 
             <motion.h1
@@ -99,9 +101,7 @@ export default function HeroSection() {
               transition={{ delay: 0.75 }}
               className="mb-8 max-w-2xl text-base text-text-secondary md:text-lg"
             >
-              Full Stack Software Engineer focused on event-driven architectures,
-              high-availability backend systems, fintech integrations, and Web3 / Stellar
-              solutions for critical enterprise environments.
+              {t.hero.intro}
             </motion.p>
 
             <motion.div
@@ -114,7 +114,7 @@ export default function HeroSection() {
                 href="#proyectos"
                 className="rounded-lg bg-primary px-6 py-3 font-medium text-background transition-all hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
               >
-                View Projects
+                {t.hero.ctaPrimary}
               </a>
               <a
                 href="/Jesner-Melgara-CV.pdf"
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 className="flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-6 py-3 font-medium text-primary transition-all hover:bg-primary/10"
               >
                 <HiDownload />
-                Download CV
+                {t.hero.ctaSecondary}
               </a>
             </motion.div>
           </div>
@@ -137,20 +137,15 @@ export default function HeroSection() {
             <div className="rounded-3xl border border-border/80 bg-surface/80 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.45)] backdrop-blur-sm">
               <div className="mb-6 flex items-center justify-between">
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-text-secondary">
-                  Core focus
+                  {t.hero.coreFocus}
                 </p>
                 <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[10px] font-medium text-primary">
-                  Senior profile
+                  {t.hero.seniorProfile}
                 </span>
               </div>
 
               <div className="mb-6 grid gap-3 sm:grid-cols-2">
-                {[
-                  "Event-driven architecture",
-                  "Distributed systems",
-                  "Web3 / Stellar",
-                  "Fintech integration",
-                ].map((item) => (
+                {t.hero.focusItems.map((item) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-border bg-background/60 px-3 py-3 text-sm text-text-secondary"
@@ -161,36 +156,23 @@ export default function HeroSection() {
               </div>
 
               <div className="grid grid-cols-3 gap-3">
-                {[
-                  { value: "1+", label: "Years" },
-                  { value: "6+", label: "Critical systems" },
-                  { value: "CPIC", label: "Membership" },
-                ].map((stat) => (
+                {t.hero.statValues.map((value, index) => (
                   <div
-                    key={stat.label}
+                    key={t.hero.statLabels[index]}
                     className="rounded-2xl border border-border bg-background/50 p-3 text-center"
                   >
-                    <div className="text-xl font-bold text-primary">{stat.value}</div>
+                    <div className="text-xl font-bold text-primary">{value}</div>
                     <div className="mt-1 text-[11px] uppercase tracking-[0.12em] text-text-secondary">
-                      {stat.label}
+                      {t.hero.statLabels[index]}
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-4">
-                <p className="text-xs uppercase tracking-[0.2em] text-primary">Selected stack</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-primary">{t.hero.selectedStack}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    ".NET / C#",
-                    "Angular",
-                    "React",
-                    "Next.js",
-                    "PostgreSQL",
-                    "Oracle DB",
-                    "Docker",
-                    "Azure",
-                  ].map((item) => (
+                  {t.hero.stackItems.map((item) => (
                     <span
                       key={item}
                       className="rounded-full border border-primary/20 bg-background/50 px-2.5 py-1 text-xs text-text-secondary"
@@ -205,7 +187,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

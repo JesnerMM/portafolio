@@ -3,24 +3,20 @@
 import { motion } from "motion/react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
-
-const stats = [
-  { label: "Professional focus", value: "Web3 / Fintech" },
-  { label: "Critical systems", value: "6+" },
-  { label: "CPIC", value: "Member" },
-];
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="sobre-mi" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="About"
-          subtitle="A bit more about me"
+          title={t.about.title}
+          subtitle={t.about.subtitle}
         />
 
         <div className="grid items-center gap-12 md:grid-cols-2">
-          {/* Photo placeholder */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,12 +35,10 @@ export default function AboutSection() {
                   priority
                 />
               </div>
-              {/* Decorative border */}
               <div className="absolute -bottom-3 -right-3 -z-10 h-72 w-72 rounded-2xl border-2 border-primary/30" />
             </div>
           </motion.div>
 
-          {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,12 +46,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="mb-6 flex flex-wrap gap-2">
-              {[
-                "Event-driven architectures",
-                "Distributed systems",
-                "Web3 / Stellar",
-                "Fintech integrations",
-              ].map((tag) => (
+              {t.about.tags.map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
@@ -68,27 +57,17 @@ export default function AboutSection() {
             </div>
 
             <p className="mb-4 leading-relaxed text-text-secondary">
-              I am <span className="text-primary">Jesner Melgara</span>, a Full Stack
-              Software Engineer focused on <span className="text-primary">Web3, distributed systems</span>,
-              event-driven architectures, and high-availability backend solutions.
-              My experience spans React, Next.js, Angular, Ionic, Node.js, .NET / C#,
-              PostgreSQL, Oracle DB, and deployments with Docker and Azure.
+              {t.about.p1}
             </p>
             <p className="mb-4 leading-relaxed text-text-secondary">
-              Active Collegiate Member of the <span className="text-primary">CPIC</span>
-              (Colegio de Profesionales en Informática y Computación de Costa Rica),
-              with a strong interest in critical systems, digital finance, payment
-              infrastructure, process automation, and Web3 / Stellar ecosystems.
+              {t.about.p2}
             </p>
             <p className="mb-6 leading-relaxed text-text-secondary">
-              I have worked on complex enterprise platforms, intelligent OCR systems,
-              and port logistics solutions, always with a focus on quality,
-              traceability, security, and scalability.
+              {t.about.p3}
             </p>
 
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, i) => (
+              {t.about.stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}

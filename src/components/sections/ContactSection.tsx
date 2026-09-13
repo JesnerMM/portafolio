@@ -13,38 +13,40 @@ import {
   HiXCircle,
 } from "react-icons/hi";
 import { SiLinkedin } from "react-icons/si";
-
-const contactInfo = [
-  {
-    icon: HiMail,
-    label: "Email",
-    value: "eliecermelgara1680@gmail.com",
-    href: "mailto:eliecermelgara1680@gmail.com",
-  },
-  {
-    icon: HiPhone,
-    label: "Phone",
-    value: "+506 8752-1680",
-    href: "tel:+50687521680",
-  },
-  {
-    icon: HiLocationMarker,
-    label: "Location",
-    value: "Cartago, Costa Rica",
-  },
-  {
-    icon: SiLinkedin,
-    label: "LinkedIn",
-    value: "linkedin.com/in/jesner-eliecer",
-    href: "https://www.linkedin.com/in/jesner-eliecer-melgara-murillo-0b4506255/",
-  },
-];
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>("idle");
+
+  const contactInfo = [
+    {
+      icon: HiMail,
+      label: t.contact.labels.email,
+      value: "eliecermelgara1680@gmail.com",
+      href: "mailto:eliecermelgara1680@gmail.com",
+    },
+    {
+      icon: HiPhone,
+      label: t.contact.labels.phone,
+      value: "+506 8752-1680",
+      href: "tel:+50687521680",
+    },
+    {
+      icon: HiLocationMarker,
+      label: t.contact.labels.location,
+      value: "Cartago, Costa Rica",
+    },
+    {
+      icon: SiLinkedin,
+      label: t.contact.labels.linkedin,
+      value: "linkedin.com/in/jesner-eliecer",
+      href: "https://www.linkedin.com/in/jesner-eliecer-melgara-murillo-0b4506255/",
+    },
+  ];
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -78,12 +80,11 @@ export default function ContactSection() {
     <section id="contacto" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Contact"
-          subtitle="Let’s talk about your project"
+          title={t.contact.title}
+          subtitle={t.contact.subtitle}
         />
 
         <div className="grid gap-12 md:grid-cols-2">
-          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +92,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <h3 className="mb-6 text-xl font-semibold">
-              Contact Information
+              {t.contact.infoTitle}
             </h3>
             <div className="space-y-4">
               {contactInfo.map((item) => {
@@ -128,21 +129,20 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="mb-6 text-xl font-semibold">Send a Message</h3>
+            <h3 className="mb-6 text-xl font-semibold">{t.contact.formTitle}</h3>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
                   htmlFor="from_name"
                   className="mb-1 block text-sm text-text-secondary"
                 >
-                  Name
+                  {t.contact.labels.name}
                 </label>
                 <input
                   type="text"
@@ -151,7 +151,7 @@ export default function ContactSection() {
                   required
                   disabled={status === "loading"}
                   className="w-full rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="Your name"
+                  placeholder={t.contact.placeholders.name}
                 />
               </div>
               <div>
@@ -159,7 +159,7 @@ export default function ContactSection() {
                   htmlFor="reply_to"
                   className="mb-1 block text-sm text-text-secondary"
                 >
-                  Email
+                  {t.contact.labels.email}
                 </label>
                 <input
                   type="email"
@@ -168,7 +168,7 @@ export default function ContactSection() {
                   required
                   disabled={status === "loading"}
                   className="w-full rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="your@email.com"
+                  placeholder={t.contact.placeholders.email}
                 />
               </div>
               <div>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                   htmlFor="message"
                   className="mb-1 block text-sm text-text-secondary"
                 >
-                  Message
+                  {t.contact.labels.message}
                 </label>
                 <textarea
                   id="message"
@@ -185,7 +185,7 @@ export default function ContactSection() {
                   rows={5}
                   disabled={status === "loading"}
                   className="w-full resize-none rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="Tell me about your project..."
+                  placeholder={t.contact.placeholders.message}
                 />
               </div>
 
@@ -200,12 +200,12 @@ export default function ContactSection() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
                     </svg>
-                    Sending...
+                    {t.contact.sending}
                   </>
                 ) : (
                   <>
                     <HiPaperAirplane className="rotate-90" />
-                    Send Message
+                    {t.contact.send}
                   </>
                 )}
               </button>
@@ -217,7 +217,7 @@ export default function ContactSection() {
                   className="flex items-center gap-2 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400"
                 >
                   <HiCheckCircle className="text-lg" />
-                  Message sent successfully. I’ll get back to you soon.
+                  {t.contact.success}
                 </motion.div>
               )}
 
@@ -228,7 +228,7 @@ export default function ContactSection() {
                   className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400"
                 >
                   <HiXCircle className="text-lg" />
-                  Something went wrong while sending. Please try again or contact me directly.
+                  {t.contact.error}
                 </motion.div>
               )}
             </form>

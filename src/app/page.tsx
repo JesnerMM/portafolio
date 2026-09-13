@@ -8,10 +8,11 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import EducationSection from "@/components/sections/EducationSection";
 import ContactSection from "@/components/sections/ContactSection";
+import { LanguageProvider } from "@/components/providers/LanguageProvider";
 
 export default function Home() {
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <main>
         <HeroSection />
@@ -24,6 +25,6 @@ export default function Home() {
       </main>
       <Footer />
       <ScrollToTop />
-    </>
+    </LanguageProvider>
   );
 }
