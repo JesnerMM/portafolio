@@ -44,9 +44,13 @@ export interface ExperienceItem {
     es: string;
   };
   role: string;
+  roleEs?: string;
   period: string;
+  periodEs?: string;
   description: string;
+  descriptionEs?: string;
   achievements: string[];
+  achievementsEs?: string[];
   technologies: TechItem[];
 }
 

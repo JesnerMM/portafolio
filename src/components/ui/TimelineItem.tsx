@@ -16,6 +16,18 @@ export default function TimelineItem({
   index,
   language,
 }: TimelineItemProps) {
+  const role = language === "es" && experience.roleEs ? experience.roleEs : experience.role;
+  const period =
+    language === "es" && experience.periodEs ? experience.periodEs : experience.period;
+  const description =
+    language === "es" && experience.descriptionEs
+      ? experience.descriptionEs
+      : experience.description;
+  const achievements =
+    language === "es" && experience.achievementsEs
+      ? experience.achievementsEs
+      : experience.achievements;
+
   return (
     <motion.div
       initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -37,16 +49,16 @@ export default function TimelineItem({
             {experience.companyDetail && ` (${experience.companyDetail[language]})`}
           </h3>
           <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-primary">
-            {experience.period}
+            {period}
           </span>
         </div>
-        <p className="mb-3 text-base font-semibold text-primary">{experience.role}</p>
+        <p className="mb-3 text-base font-semibold text-primary">{role}</p>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">
-          {experience.description}
+          {description}
         </p>
 
         <ul className="mb-4 space-y-2">
-          {experience.achievements.map((achievement, i) => (
+          {achievements.map((achievement, i) => (
             <li
               key={i}
               className="flex items-start gap-2 text-sm text-text-secondary"
