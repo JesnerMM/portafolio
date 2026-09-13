@@ -69,10 +69,6 @@ export const translations = {
       title: "Key Engineering Projects",
       subtitle:
         "Selected work across distributed systems, fintech, and enterprise platforms",
-      filters: [
-        { label: "All", value: "todos" },
-        { label: "Professional", value: "profesional" },
-      ],
     },
     skills: {
       title: "Skills",
@@ -181,10 +177,6 @@ export const translations = {
       title: "Proyectos clave de ingeniería",
       subtitle:
         "Trabajos seleccionados en sistemas distribuidos, fintech y plataformas empresariales",
-      filters: [
-        { label: "Todos", value: "todos" },
-        { label: "Profesional", value: "profesional" },
-      ],
     },
     skills: {
       title: "Habilidades",
