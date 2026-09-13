@@ -6,7 +6,7 @@ import { experiences } from "@/data/experience";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function ExperienceSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="experiencia" className="px-4 py-20">
@@ -18,7 +18,12 @@ export default function ExperienceSection() {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <TimelineItem key={exp.company} experience={exp} index={index} />
+            <TimelineItem
+              key={exp.company}
+              experience={exp}
+              index={index}
+              language={language}
+            />
           ))}
         </div>
       </div>

@@ -18,8 +18,11 @@ import { HiShieldCheck, HiDatabase, HiServer } from "react-icons/hi";
 
 export const experiences: ExperienceItem[] = [
   {
-    company:
-      "JAPDEVA (Junta de Administración Portuaria y de Desarrollo Económico de la Vertiente Atlántica)",
+    company: "JAPDEVA",
+    companyDetail: {
+      en: "Port Administration and Economic Development Board of the Atlantic Region",
+      es: "Junta de Administración Portuaria y de Desarrollo Económico de la Vertiente Atlántica",
+    },
     role: "Full Stack Software Engineer",
     period: "July 2026 — Present",
     description:

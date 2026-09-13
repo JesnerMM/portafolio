@@ -39,6 +39,10 @@ export interface SkillCategory {
 
 export interface ExperienceItem {
   company: string;
+  companyDetail?: {
+    en: string;
+    es: string;
+  };
   role: string;
   period: string;
   description: string;
