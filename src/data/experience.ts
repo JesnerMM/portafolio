@@ -44,7 +44,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: "CyberPro CR",
     role: "Full Stack Software Engineer",
-    period: "January 2025 — June 2026",
+    period: "July 2025 — June 2026",
     description:
       "I developed and evolved enterprise solutions focused on full stack applications, management platforms, intelligent OCR, electronic invoicing, and mobile/offline-first experiences.",
     achievements: [

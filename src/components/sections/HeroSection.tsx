@@ -162,8 +162,8 @@ export default function HeroSection() {
 
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  { value: "7+", label: "Years" },
-                  { value: "6", label: "Critical systems" },
+                  { value: "1+", label: "Years" },
+                  { value: "6+", label: "Critical systems" },
                   { value: "CPIC", label: "Membership" },
                 ].map((stat) => (
                   <div

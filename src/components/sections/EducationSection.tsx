@@ -19,19 +19,16 @@ export default function EducationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="overflow-hidden rounded-xl border border-border bg-surface"
+          className="overflow-hidden rounded-[30px] border border-white/10 bg-slate-950/40 shadow-[0_20px_60px_rgba(15,23,42,0.38)]"
         >
           <div className="flex flex-col gap-8 p-8">
-            {/* Main content */}
             <div className="flex flex-col items-center gap-6 md:flex-row">
-              {/* University icon */}
-              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-border bg-surface-light">
+              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
                 <HiAcademicCap className="text-4xl text-primary" />
               </div>
 
-              {/* Details */}
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-bold">
+                <h3 className="text-xl font-bold text-white">
                   University of Costa Rica
                 </h3>
 
@@ -39,7 +36,7 @@ export default function EducationSection() {
                   Business Informatics Bachelor's Degree
                 </p>
 
-                <p className="mt-2 text-sm text-text-secondary">
+                <p className="mt-2 text-sm uppercase tracking-[0.18em] text-text-secondary">
                   2021 - 2025
                 </p>
 
@@ -52,8 +49,7 @@ export default function EducationSection() {
               </div>
             </div>
 
-            {/* Degree image */}
-            <div className="overflow-hidden rounded-xl border border-border">
+            <div className="overflow-hidden rounded-[22px] border border-white/10 bg-slate-900/70">
               <Image
                 src="/titulo.jpeg"
                 alt="Titulo universitario"

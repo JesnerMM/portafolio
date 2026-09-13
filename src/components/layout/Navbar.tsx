@@ -6,10 +6,11 @@ import { navLinks } from "@/data/navigation";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiMenu, HiTranslate, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [language, setLanguage] = useState<"en" | "es">("en");
   const { scrollDirection, scrollY } = useScrollDirection();
 
   const sectionIds = useMemo(
@@ -71,52 +72,88 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <ul ref={ulRef} className="relative hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => {
-            const id = link.href.replace("#", "");
-            const isActive = activeSection === id;
-            return (
-              <li key={link.href}>
-                <a
-                  ref={(el) => {
-                    if (el) navRefs.current.set(id, el);
-                  }}
-                  href={link.href}
-                  className={cn(
-                    "block rounded-lg px-3 py-2 text-sm transition-colors",
-                    isActive
-                      ? "text-primary"
-                      : "text-text-secondary hover:text-text"
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            );
-          })}
-          {/* Single indicator that slides horizontally */}
-          <motion.div
-            className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-primary"
-            animate={{
-              left: indicator.left,
-              width: indicator.width,
-            }}
-            transition={{ type: "spring", stiffness: 350, damping: 30 }}
-          />
-        </ul>
+        <div className="hidden items-center gap-3 md:flex">
+          <ul ref={ulRef} className="relative hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const isActive = activeSection === id;
+              return (
+                <li key={link.href}>
+                  <a
+                    ref={(el) => {
+                      if (el) navRefs.current.set(id, el);
+                    }}
+                    href={link.href}
+                    className={cn(
+                      "block rounded-lg px-3 py-2 text-sm transition-colors",
+                      isActive
+                        ? "text-primary"
+                        : "text-text-secondary hover:text-text"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              );
+            })}
+            {/* Single indicator that slides horizontally */}
+            <motion.div
+              className="pointer-events-none absolute bottom-0 h-0.5 rounded-full bg-primary"
+              animate={{
+                left: indicator.left,
+                width: indicator.width,
+              }}
+              transition={{ type: "spring", stiffness: 350, damping: 30 }}
+            />
+          </ul>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="rounded-lg p-2 text-text-secondary transition-colors hover:text-primary md:hidden"
-          aria-label="Menu"
-        >
-          {mobileOpen ? (
-            <HiX className="text-2xl" />
-          ) : (
-            <HiMenu className="text-2xl" />
-          )}
-        </button>
+          <div className="flex items-center gap-1 rounded-full border border-border bg-surface/80 p-1 shadow-[0_0_0_1px_rgba(15,23,42,0.4)] backdrop-blur-sm">
+            <button
+              onClick={() => setLanguage("en")}
+              className={cn(
+                "rounded-full px-2.5 py-1 text-[11px] font-semibold transition-all",
+                language === "en"
+                  ? "bg-primary text-background"
+                  : "text-text-secondary hover:text-text"
+              )}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("es")}
+              className={cn(
+                "rounded-full px-2.5 py-1 text-[11px] font-semibold transition-all",
+                language === "es"
+                  ? "bg-primary text-background"
+                  : "text-text-secondary hover:text-text"
+              )}
+            >
+              ES
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            className="flex items-center gap-1 rounded-full border border-border bg-surface/80 px-2 py-1 text-[11px] font-semibold text-text-secondary shadow-[0_0_0_1px_rgba(15,23,42,0.4)] backdrop-blur-sm"
+            aria-label="Language selector"
+          >
+            <HiTranslate className="text-sm" />
+            {language.toUpperCase()}
+          </button>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="rounded-lg p-2 text-text-secondary transition-colors hover:text-primary"
+            aria-label="Menu"
+          >
+            {mobileOpen ? (
+              <HiX className="text-2xl" />
+            ) : (
+              <HiMenu className="text-2xl" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -149,6 +186,28 @@ export default function Navbar() {
                   </li>
                 );
               })}
+
+              <li className="mt-3 border-t border-border pt-3">
+                <div className="flex items-center justify-center gap-2 rounded-full border border-border bg-surface p-1">
+                  {(["en", "es"] as const).map((item) => (
+                    <button
+                      key={item}
+                      onClick={() => {
+                        setLanguage(item);
+                        setMobileOpen(false);
+                      }}
+                      className={cn(
+                        "rounded-full px-3 py-1.5 text-xs font-semibold transition-all",
+                        language === item
+                          ? "bg-primary text-background"
+                          : "text-text-secondary"
+                      )}
+                    >
+                      {item.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
+              </li>
             </ul>
           </motion.div>
         )}

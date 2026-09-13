@@ -52,7 +52,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Grid */}
-        <motion.div layout className="grid gap-6 md:grid-cols-2">
+        <motion.div layout className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
               <ProjectCard

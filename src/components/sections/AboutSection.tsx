@@ -5,9 +5,9 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
 
 const stats = [
-  { label: "Years of experience", value: "7+" },
-  { label: "Critical systems", value: "6" },
-  { label: "CPIC", value: "Active" },
+  { label: "Professional focus", value: "Web3 / Fintech" },
+  { label: "Critical systems", value: "6+" },
+  { label: "CPIC", value: "Member" },
 ];
 
 export default function AboutSection() {

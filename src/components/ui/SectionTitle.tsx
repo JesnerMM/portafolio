@@ -20,12 +20,10 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
         <span className="h-1.5 w-1.5 rounded-full bg-primary" />
         Portfolio
       </div>
-      <h2 className="text-3xl font-black tracking-tight md:text-5xl">
-        <span className="text-primary">&lt;</span>
+      <h2 className="text-3xl font-black tracking-[-0.04em] text-white md:text-5xl">
         {title}
-        <span className="text-primary">/&gt;</span>
       </h2>
-      <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-primary via-accent to-primary" />
+      <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-primary via-cyan-300 to-accent" />
       {subtitle && (
         <p className="mx-auto mt-5 max-w-2xl text-base text-text-secondary md:text-lg">
           {subtitle}
