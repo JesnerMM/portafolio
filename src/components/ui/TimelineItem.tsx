@@ -32,12 +32,10 @@ export default function TimelineItem({
 
       <div className="rounded-[28px] border border-white/10 bg-slate-950/40 p-6 shadow-[0_20px_60px_rgba(15,23,42,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_30px_80px_rgba(6,182,212,0.08)]">
         <div className="mb-2 flex flex-wrap items-center gap-3">
-          <h3 className="text-xl font-bold text-white">{experience.company}</h3>
-          {experience.companyDetail && (
-            <span className="text-sm text-text-secondary">
-              ({experience.companyDetail[language]})
-            </span>
-          )}
+          <h3 className="text-xl font-bold text-white">
+            {experience.company}
+            {experience.companyDetail && ` (${experience.companyDetail[language]})`}
+          </h3>
           <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-primary">
             {experience.period}
           </span>
