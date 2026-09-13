@@ -31,14 +31,14 @@ export default function TimelineItem({
       <div className="absolute bottom-0 left-[15px] top-8 w-px bg-border md:left-[23px]" />
 
       {/* Card */}
-      <div className="rounded-xl border border-border bg-surface p-6 transition-colors hover:border-primary/30">
+      <div className="rounded-2xl border border-border bg-surface p-6 shadow-[0_0_0_1px_rgba(15,23,42,0.5)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_25px_rgba(6,182,212,0.08)]">
         <div className="mb-2 flex flex-wrap items-center gap-3">
-          <h3 className="text-xl font-bold">{experience.company}</h3>
-          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+          <h3 className="text-xl font-bold text-text">{experience.company}</h3>
+          <span className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
             {experience.period}
           </span>
         </div>
-        <p className="mb-3 font-medium text-primary">{experience.role}</p>
+        <p className="mb-3 text-base font-semibold text-primary">{experience.role}</p>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">
           {experience.description}
         </p>

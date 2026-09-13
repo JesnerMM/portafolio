@@ -53,10 +53,20 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 text-center">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+          className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-primary"
+        >
+          <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.7)]" />
+          CPIC Member • Available for senior roles
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
           className="mb-4 font-mono text-sm text-primary"
         >
           Hola, mi nombre es
@@ -66,7 +76,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mb-4 text-5xl font-bold md:text-7xl"
+          className="mb-4 text-5xl font-black tracking-tight md:text-7xl"
         >
           Jesner Melgara
         </motion.h1>
@@ -75,11 +85,22 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mb-8 h-10 font-mono text-xl text-text-secondary md:text-2xl"
+          className="mb-8 min-h-12 font-mono text-lg text-text-secondary md:text-2xl"
         >
           <span>{text}</span>
           <span className="ml-0.5 animate-pulse text-primary">|</span>
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.75 }}
+          className="mx-auto mb-8 max-w-3xl text-base text-text-secondary md:text-lg"
+        >
+          Full Stack Software Engineer enfocado en arquitecturas basadas en eventos,
+          sistemas backend de alta disponibilidad, integraciones fintech y soluciones
+          Web3 / Stellar para entornos empresariales críticos.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -97,7 +118,7 @@ export default function HeroSection() {
             href="/Jesner-Melgara-CV.pdf"
             download
             target="_blank"
-            className="flex items-center gap-2 rounded-lg border border-primary px-6 py-3 font-medium text-primary transition-all hover:bg-primary/10"
+            className="flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-6 py-3 font-medium text-primary transition-all hover:bg-primary/10"
           >
             <HiDownload />
             Descargar CV

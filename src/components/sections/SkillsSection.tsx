@@ -23,10 +23,10 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: catIndex * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-xl border border-border bg-surface p-6"
+                className="rounded-2xl border border-border bg-surface p-6 shadow-[0_0_0_1px_rgba(15,23,42,0.5)] transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_25px_rgba(6,182,212,0.06)]"
               >
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="rounded-lg bg-primary/10 p-2">
+                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-2.5">
                     <CategoryIcon className="text-xl text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold">{category.title}</h3>

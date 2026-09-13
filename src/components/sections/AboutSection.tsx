@@ -5,9 +5,9 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
 
 const stats = [
-  { label: "Proyectos", value: "6+" },
-  { label: "Sistemas Empresariales", value: "3" },
-  { label: "UCR", value: "2025" },
+  { label: "Años de experiencia", value: "7+" },
+  { label: "Sistemas críticos", value: "6" },
+  { label: "CPIC", value: "Activo" },
 ];
 
 export default function AboutSection() {
@@ -51,6 +51,22 @@ export default function AboutSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
+            <div className="mb-6 flex flex-wrap gap-2">
+              {[
+                "Event-driven architectures",
+                "Distributed systems",
+                "Web3 / Stellar",
+                "Fintech integrations",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
             <p className="mb-4 leading-relaxed text-text-secondary">
               Soy <span className="text-primary">Jesner Melgara</span>, Full Stack
               Software Engineer con enfoque en <span className="text-primary">Web3, distributed systems</span>,
