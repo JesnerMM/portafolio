@@ -9,8 +9,8 @@ export default function SkillsSection() {
     <section id="habilidades" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Habilidades"
-          subtitle="Tecnologias y herramientas que domino"
+          title="Skills"
+          subtitle="Technologies and tools I work with"
         />
 
         <div className="grid gap-6 md:grid-cols-2">

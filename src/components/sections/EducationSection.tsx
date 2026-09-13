@@ -10,8 +10,8 @@ export default function EducationSection() {
     <section id="educacion" className="px-4 py-20">
       <div className="mx-auto max-w-3xl">
         <SectionTitle
-          title="Educacion"
-          subtitle="Mi formacion academica"
+          title="Education"
+          subtitle="My academic background"
         />
 
         <motion.div
@@ -32,11 +32,11 @@ export default function EducationSection() {
               {/* Details */}
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold">
-                  Universidad de Costa Rica
+                  University of Costa Rica
                 </h3>
 
                 <p className="mt-1 text-lg text-primary">
-                  Bachillerato en Informatica Empresarial
+                  Business Informatics Bachelor's Degree
                 </p>
 
                 <p className="mt-2 text-sm text-text-secondary">
@@ -44,10 +44,10 @@ export default function EducationSection() {
                 </p>
 
                 <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                  Formacion integral en desarrollo de software, bases de datos,
-                  ingenieria de requisitos, gestion de proyectos de TI y
-                  administracion de empresas, con enfoque en soluciones
-                  tecnologicas para el sector empresarial.
+                  Comprehensive training in software development, database design,
+                  requirements engineering, IT project management, and business
+                  administration, with a focus on technology solutions for the
+                  enterprise sector.
                 </p>
               </div>
             </div>

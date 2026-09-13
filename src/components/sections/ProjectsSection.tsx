@@ -10,8 +10,8 @@ import { Project } from "@/types";
 import { cn } from "@/lib/utils";
 
 const filters = [
-  { label: "Todos", value: "todos" },
-  { label: "Profesional", value: "profesional" },
+  { label: "All", value: "todos" },
+  { label: "Professional", value: "profesional" },
 ] as const;
 
 type FilterValue = (typeof filters)[number]["value"];

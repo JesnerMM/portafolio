@@ -37,9 +37,9 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="flex items-center gap-1 text-sm text-text-secondary">
-            &copy; {new Date().getFullYear()} Jesner Melgara. Hecho con
+            &copy; {new Date().getFullYear()} Jesner Melgara. Built with
             <HiHeart className="text-primary" />
-            en Next.js y TailwindCSS
+            in Next.js and TailwindCSS
           </p>
         </div>
       </div>

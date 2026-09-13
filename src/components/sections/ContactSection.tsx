@@ -23,13 +23,13 @@ const contactInfo = [
   },
   {
     icon: HiPhone,
-    label: "Telefono",
+    label: "Phone",
     value: "+506 8752-1680",
     href: "tel:+50687521680",
   },
   {
     icon: HiLocationMarker,
-    label: "Ubicacion",
+    label: "Location",
     value: "Cartago, Costa Rica",
   },
   {
@@ -78,8 +78,8 @@ export default function ContactSection() {
     <section id="contacto" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Contacto"
-          subtitle="Hablemos sobre tu proyecto"
+          title="Contact"
+          subtitle="Let’s talk about your project"
         />
 
         <div className="grid gap-12 md:grid-cols-2">
@@ -91,7 +91,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <h3 className="mb-6 text-xl font-semibold">
-              Informacion de Contacto
+              Contact Information
             </h3>
             <div className="space-y-4">
               {contactInfo.map((item) => {
@@ -135,14 +135,14 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="mb-6 text-xl font-semibold">Enviar Mensaje</h3>
+            <h3 className="mb-6 text-xl font-semibold">Send a Message</h3>
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
                   htmlFor="from_name"
                   className="mb-1 block text-sm text-text-secondary"
                 >
-                  Nombre
+                  Name
                 </label>
                 <input
                   type="text"
@@ -151,7 +151,7 @@ export default function ContactSection() {
                   required
                   disabled={status === "loading"}
                   className="w-full rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="Tu nombre"
+                  placeholder="Your name"
                 />
               </div>
               <div>
@@ -168,7 +168,7 @@ export default function ContactSection() {
                   required
                   disabled={status === "loading"}
                   className="w-full rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="tu@email.com"
+                  placeholder="your@email.com"
                 />
               </div>
               <div>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                   htmlFor="message"
                   className="mb-1 block text-sm text-text-secondary"
                 >
-                  Mensaje
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -185,7 +185,7 @@ export default function ContactSection() {
                   rows={5}
                   disabled={status === "loading"}
                   className="w-full resize-none rounded-lg border border-border bg-surface px-4 py-3 text-sm text-text outline-none transition-colors focus:border-primary disabled:opacity-50"
-                  placeholder="Cuentame sobre tu proyecto..."
+                  placeholder="Tell me about your project..."
                 />
               </div>
 
@@ -200,12 +200,12 @@ export default function ContactSection() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
                     </svg>
-                    Enviando...
+                    Sending...
                   </>
                 ) : (
                   <>
                     <HiPaperAirplane className="rotate-90" />
-                    Enviar Mensaje
+                    Send Message
                   </>
                 )}
               </button>
@@ -217,7 +217,7 @@ export default function ContactSection() {
                   className="flex items-center gap-2 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-400"
                 >
                   <HiCheckCircle className="text-lg" />
-                  Mensaje enviado correctamente. Te responderé pronto.
+                  Message sent successfully. I’ll get back to you soon.
                 </motion.div>
               )}
 
@@ -228,7 +228,7 @@ export default function ContactSection() {
                   className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400"
                 >
                   <HiXCircle className="text-lg" />
-                  Ocurrió un error al enviar. Intenta de nuevo o escríbeme directamente.
+                  Something went wrong while sending. Please try again or contact me directly.
                 </motion.div>
               )}
             </form>

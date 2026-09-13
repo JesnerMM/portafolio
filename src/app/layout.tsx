@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Jesner Melgara | Full Stack Software Engineer | Web3 & Distributed Systems",
   description:
-    "Portafolio profesional de Jesner Melgara - Full Stack Software Engineer especializado en Web3, distributed systems, .NET, Angular, Next.js, arquitectura basada en eventos y soluciones fintech.",
+    "Professional portfolio of Jesner Melgara - Full Stack Software Engineer focused on Web3, distributed systems, event-driven architectures, fintech integrations, and enterprise software engineering.",
   keywords: [
     "Full Stack Software Engineer",
     "Web3",
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="en" className="dark">
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >

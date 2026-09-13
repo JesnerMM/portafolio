@@ -9,8 +9,8 @@ export default function ExperienceSection() {
     <section id="experiencia" className="px-4 py-20">
       <div className="mx-auto max-w-3xl">
         <SectionTitle
-          title="Experiencia"
-          subtitle="Mi trayectoria profesional"
+          title="Experience"
+          subtitle="My professional journey"
         />
 
         <div className="space-y-8">

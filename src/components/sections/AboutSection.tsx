@@ -5,9 +5,9 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
 
 const stats = [
-  { label: "Años de experiencia", value: "7+" },
-  { label: "Sistemas críticos", value: "6" },
-  { label: "CPIC", value: "Activo" },
+  { label: "Years of experience", value: "7+" },
+  { label: "Critical systems", value: "6" },
+  { label: "CPIC", value: "Active" },
 ];
 
 export default function AboutSection() {
@@ -15,8 +15,8 @@ export default function AboutSection() {
     <section id="sobre-mi" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Sobre Mi"
-          subtitle="Conociendome un poco mas"
+          title="About"
+          subtitle="A bit more about me"
         />
 
         <div className="grid items-center gap-12 md:grid-cols-2">
@@ -68,22 +68,22 @@ export default function AboutSection() {
             </div>
 
             <p className="mb-4 leading-relaxed text-text-secondary">
-              Soy <span className="text-primary">Jesner Melgara</span>, Full Stack
-              Software Engineer con enfoque en <span className="text-primary">Web3, distributed systems</span>,
-              arquitecturas basadas en eventos y soluciones backend de alta disponibilidad.
-              Mi experiencia abarca React, Next.js, Angular, Ionic, Node.js, .NET / C#,
-              PostgreSQL, Oracle DB y despliegues con Docker y Azure.
+              I am <span className="text-primary">Jesner Melgara</span>, a Full Stack
+              Software Engineer focused on <span className="text-primary">Web3, distributed systems</span>,
+              event-driven architectures, and high-availability backend solutions.
+              My experience spans React, Next.js, Angular, Ionic, Node.js, .NET / C#,
+              PostgreSQL, Oracle DB, and deployments with Docker and Azure.
             </p>
             <p className="mb-4 leading-relaxed text-text-secondary">
-              Miembro Colegiado Activo del <span className="text-primary">CPIC</span>
+              Active Collegiate Member of the <span className="text-primary">CPIC</span>
               (Colegio de Profesionales en Informática y Computación de Costa Rica),
-              con especial interés en sistemas críticos, finanzas digitales, pagos,
-              automatización de procesos y ecosistemas Web3 / Stellar.
+              with a strong interest in critical systems, digital finance, payment
+              infrastructure, process automation, and Web3 / Stellar ecosystems.
             </p>
             <p className="mb-6 leading-relaxed text-text-secondary">
-              He trabajado en proyectos que van desde plataformas empresariales complejas
-              y OCR inteligente hasta soluciones de gestión portuaria, siempre con foco en
-              calidad, trazabilidad, seguridad y escalabilidad.
+              I have worked on complex enterprise platforms, intelligent OCR systems,
+              and port logistics solutions, always with a focus on quality,
+              traceability, security, and scalability.
             </p>
 
             {/* Stats */}

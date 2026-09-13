@@ -75,7 +75,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               <div className="mb-4 flex items-center gap-3">
                 <h2 className="text-2xl font-bold">{project.title}</h2>
                 <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                  Profesional
+                  Professional
                 </span>
               </div>
 
@@ -86,7 +86,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {/* Features */}
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-primary">
-                  Caracteristicas Principales
+                  Key Features
                 </h3>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {project.features.map((feature, i) => (
@@ -104,7 +104,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {/* Technologies */}
               <div>
                 <h3 className="mb-3 text-lg font-semibold text-primary">
-                  Tecnologias Utilizadas
+                  Technologies Used
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (

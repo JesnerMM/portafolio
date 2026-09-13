@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
             <div className="text-center">
               <HiLockClosed className="mx-auto mb-2 text-3xl text-primary/30" />
               <span className="text-xs text-text-secondary">
-                Imagenes restringidas
+                Images restricted
               </span>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
         )}
         <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-background">
-            Ver Detalles
+            View Details
           </span>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
             {project.title}
           </h3>
           <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
-            Profesional
+            Professional
           </span>
         </div>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">

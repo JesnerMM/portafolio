@@ -46,7 +46,7 @@ function GroupCarousel({ images, groupLabel }: GroupCarouselProps) {
                 <div className="relative h-[420px] w-full">
                   <Image
                     src={img}
-                    alt={`${groupLabel} - captura ${i + 1}`}
+                    alt={`${groupLabel} - screenshot ${i + 1}`}
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, 900px"
@@ -63,14 +63,14 @@ function GroupCarousel({ images, groupLabel }: GroupCarouselProps) {
             <button
               onClick={scrollPrev}
               className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-background/80 p-2.5 text-text shadow backdrop-blur-sm transition-colors hover:bg-primary hover:text-background"
-              aria-label="Anterior"
+              aria-label="Previous"
             >
               <HiChevronLeft className="text-xl" />
             </button>
             <button
               onClick={scrollNext}
               className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-background/80 p-2.5 text-text shadow backdrop-blur-sm transition-colors hover:bg-primary hover:text-background"
-              aria-label="Siguiente"
+              aria-label="Next"
             >
               <HiChevronRight className="text-xl" />
             </button>
@@ -95,7 +95,7 @@ function GroupCarousel({ images, groupLabel }: GroupCarouselProps) {
                   ? "border-primary opacity-100 shadow-[0_0_0_1px_rgba(6,182,212,0.4)]"
                   : "border-transparent opacity-50 hover:opacity-90"
               }`}
-              aria-label={`Ir a imagen ${i + 1}`}
+              aria-label={`Go to image ${i + 1}`}
             >
               <Image
                 src={img}
@@ -130,9 +130,9 @@ export default function ImageCarousel({
       <div className="flex h-64 items-center justify-center rounded-t-2xl bg-surface-light">
         <div className="px-6 text-center">
           <HiLockClosed className="mx-auto mb-3 text-5xl text-primary/40" />
-          <p className="font-medium text-text">Imagenes no disponibles</p>
+          <p className="font-medium text-text">Images not available</p>
           <p className="mt-1 text-sm text-text-secondary">
-            La empresa no otorgo permiso para mostrar capturas del sistema.
+            The company did not grant permission to display screenshots of the system.
           </p>
         </div>
       </div>
