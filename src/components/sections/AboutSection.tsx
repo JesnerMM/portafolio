@@ -52,16 +52,22 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="mb-4 leading-relaxed text-text-secondary">
-              Soy un <span className="text-primary">Desarrollador Full Stack</span> graduado
-              de la Universidad de Costa Rica, con experiencia en el desarrollo de
-              sistemas empresariales usando tecnologias modernas como React, Next.js,
-              Angular, Node.js y .NET.
+              Soy <span className="text-primary">Jesner Melgara</span>, Full Stack
+              Software Engineer con enfoque en <span className="text-primary">Web3, distributed systems</span>,
+              arquitecturas basadas en eventos y soluciones backend de alta disponibilidad.
+              Mi experiencia abarca React, Next.js, Angular, Ionic, Node.js, .NET / C#,
+              PostgreSQL, Oracle DB y despliegues con Docker y Azure.
+            </p>
+            <p className="mb-4 leading-relaxed text-text-secondary">
+              Miembro Colegiado Activo del <span className="text-primary">CPIC</span>
+              (Colegio de Profesionales en Informática y Computación de Costa Rica),
+              con especial interés en sistemas críticos, finanzas digitales, pagos,
+              automatización de procesos y ecosistemas Web3 / Stellar.
             </p>
             <p className="mb-6 leading-relaxed text-text-secondary">
-              Mi enfoque se centra en crear soluciones eficientes, escalables y con
-              excelente experiencia de usuario. He trabajado en proyectos que van desde
-              sistemas de facturacion electronica hasta plataformas de gestion documental
-              con OCR, siempre buscando la excelencia tecnica y la innovacion.
+              He trabajado en proyectos que van desde plataformas empresariales complejas
+              y OCR inteligente hasta soluciones de gestión portuaria, siempre con foco en
+              calidad, trazabilidad, seguridad y escalabilidad.
             </p>
 
             {/* Stats */}

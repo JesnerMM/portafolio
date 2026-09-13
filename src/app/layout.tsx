@@ -13,17 +13,21 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jesner Melgara | Desarrollador Full Stack",
+  title: "Jesner Melgara | Full Stack Software Engineer | Web3 & Distributed Systems",
   description:
-    "Portafolio profesional de Jesner Melgara - Desarrollador Full Stack especializado en React, Next.js, Angular, .NET y más.",
+    "Portafolio profesional de Jesner Melgara - Full Stack Software Engineer especializado en Web3, distributed systems, .NET, Angular, Next.js, arquitectura basada en eventos y soluciones fintech.",
   keywords: [
-    "Desarrollador Full Stack",
+    "Full Stack Software Engineer",
+    "Web3",
+    "Stellar",
+    "Distributed Systems",
     "Next.js",
     "React",
     "Angular",
     ".NET",
     "TypeScript",
     "Costa Rica",
+    "CPIC",
   ],
   authors: [{ name: "Jesner Melgara" }],
 };

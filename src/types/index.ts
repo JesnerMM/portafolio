@@ -16,7 +16,7 @@ export interface Project {
   title: string;
   shortDescription: string;
   fullDescription: string;
-  category: "profesional" | "academico";
+  category: "profesional";
   technologies: TechItem[];
   features: string[];
   imageGroups: ImageGroup[];

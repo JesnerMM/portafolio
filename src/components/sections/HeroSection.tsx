@@ -5,9 +5,9 @@ import { motion } from "motion/react";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
 
 const roles = [
-  "Desarrollador Full Stack",
-  "Ingeniero de Software",
-  "Desarrollador Web",
+  "Full Stack Software Engineer | Web3 & Distributed Systems",
+  "Software Engineer • Event-Driven Architectures",
+  "Web3 & Distributed Systems",
 ];
 
 export default function HeroSection() {

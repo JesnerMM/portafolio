@@ -203,10 +203,10 @@ export const projects: Project[] = [
     id: "solitel-oij",
     title: "Solitel - OIJ",
     shortDescription:
-      "Prototipo académico para el OIJ de Costa Rica que gestiona solicitudes de información telefónica en casos judiciales, construido con Clean Architecture, principios SOLID y metodología RUP.",
+      "Sistema de gestión para solicitudes de análisis de información telefónica en casos judiciales, construido con Clean Architecture, principios SOLID y flujo de aprobación multirol.",
     fullDescription:
-      "Prototipo desarrollado en colaboración directa con el Organismo de Investigación Judicial (OIJ) de Costa Rica, con requerimientos levantados mediante entrevistas con las partes interesadas reales del organismo. El sistema gestiona el ciclo completo de solicitudes de análisis de información telefónica en casos judiciales.\n\nEl backend fue construido en .NET 8 sobre Clean Architecture con cinco capas bien delimitadas: BC (núcleo del dominio: entidades, reglas de negocio y constantes), BW (casos de uso e interfaces de contratos), DA (acceso a datos con Entity Framework Core y patrón Repository), SG (servicios generales externos) y la capa de API (controladores, DTOs y punto de composición de dependencias). Las dependencias fluyen estrictamente hacia adentro, garantizando que el núcleo del negocio sea independiente de cualquier framework o infraestructura.\n\nMi rol fue full stack: diseñé la arquitectura del backend, desarrollé el módulo completo de solicitudes de análisis con CRUD de requerimientos y endpoint de aprobación, implementé el sistema de roles y permisos en el frontend Angular, actualicé el módulo de inicio de sesión, y creé los CRUDs de proveedor y oficina. El proyecto siguió la metodología RUP con sus cuatro fases: inicio, elaboración, construcción y transición.",
-    category: "academico",
+      "Proyecto de ingeniería desarrollado en colaboración directa con el Organismo de Investigación Judicial (OIJ) de Costa Rica, con requerimientos levantados mediante entrevistas con las partes interesadas reales del organismo. El sistema gestiona el ciclo completo de solicitudes de análisis de información telefónica en casos judiciales.\n\nEl backend fue construido en .NET 8 sobre Clean Architecture con cinco capas bien delimitadas: BC (núcleo del dominio: entidades, reglas de negocio y constantes), BW (casos de uso e interfaces de contratos), DA (acceso a datos con Entity Framework Core y patrón Repository), SG (servicios generales externos) y la capa de API (controladores, DTOs y punto de composición de dependencias). Las dependencias fluyen estrictamente hacia adentro, garantizando que el núcleo del negocio sea independiente de cualquier framework o infraestructura.\n\nMi rol fue full stack: diseñé la arquitectura del backend, desarrollé el módulo completo de solicitudes de análisis con CRUD de requerimientos y endpoint de aprobación, implementé el sistema de roles y permisos en el frontend Angular, actualicé el módulo de inicio de sesión, y creé los CRUDs de proveedor y oficina. El proyecto siguió la metodología RUP con sus cuatro fases: inicio, elaboración, construcción y transición.",
+    category: "profesional",
     technologies: [
       { name: "Angular", icon: SiAngular, color: "#DD0031" },
       { name: ".NET 8 / C#", icon: SiDotnet, color: "#512BD4" },
@@ -233,55 +233,31 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "cupones-online",
-    title: "Sistema de Venta de Cupones Online",
+    id: "microservicios-pagos-qr",
+    title: "Microservicios con Pagos QR y Protocolo ISO 8583",
     shortDescription:
-      "Plataforma de cupones de descuento con panel web en React, dos APIs en .NET 8 y PHP, y app móvil híbrida en Ionic/Angular para el canje de cupones.",
+      "Arquitectura de microservicios distribuidos en .NET 8 para pagos QR, validación con algoritmo de Luhn, integración con gateways y despliegue en Azure.",
     fullDescription:
-      "Plataforma completa para la gestión y canje de cupones de descuento para comercios locales, desarrollada como proyecto académico con una arquitectura multi-capa y múltiples stacks tecnológicos.\n\nEl sistema cuenta con tres componentes principales: un panel administrativo web en React con Bootstrap para la gestión de empresas, categorías, cupones y promociones; dos backends complementarios: uno en .NET 8 con Clean Architecture de cinco capas (BC, BW, DA, SG y API) usando Entity Framework Core y SQL Server, y otro en PHP con arquitectura en capas (Business, Data, Presentation); y una aplicación móvil híbrida en Ionic + Angular con Capacitor para el canje de cupones por parte de los usuarios finales.\n\nLas funcionalidades principales incluyen CRUD completo de cupones con categorías y empresas, gestión de promociones con condiciones de uso, carrito de canje, historial de compras del usuario y geolocalización de cupones cercanos.",
-    category: "academico",
+      "Proyecto de ingeniería orientado a pagos digitales y finanzas electrónicas, diseñado como una solución distribuida en microservicios con .NET 8. La arquitectura separa responsabilidades operativas y de negocio para manejar transacciones, validaciones, integración con pasarelas de pago y auditoría de eventos de forma segura y escalable.\n\nEntre los elementos clave destacan la validación de datos con algoritmos de Luhn, el manejo de mensajes con protocolo ISO 8583, la integración con gateways de pago y la orquestación de procesos críticos mediante servicios desacoplados. El proyecto refleja mi interés y capacidad para construir sistemas de alta confiabilidad, con foco en pagos, trazabilidad, seguridad y rendimiento en entornos cloud.\n\nEste tipo de soluciones son especialmente relevantes en ecosistemas fintech y Web3, donde la integridad de las transacciones y la automatización de flujos son fundamentales.",
+    category: "profesional",
     technologies: [
-      { name: "React", icon: SiReact, color: "#61DAFB" },
-      { name: "PHP", icon: SiPhp, color: "#777BB4" },
       { name: ".NET 8 / C#", icon: SiDotnet, color: "#512BD4" },
+      { name: "Microservicios", icon: HiServer, color: "#22C55E" },
+      { name: "ISO 8583", icon: HiShieldCheck, color: "#F59E0B" },
+      { name: "Azure", icon: HiServer, color: "#0078D4" },
       { name: "Entity Framework", icon: HiDatabase, color: "#68217A" },
-      { name: "Ionic", icon: SiIonic, color: "#3880FF" },
-      { name: "Capacitor", icon: SiCapacitor, color: "#119EFF" },
       { name: "SQL Server", icon: HiServer, color: "#CC2927" },
-      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "RabbitMQ", icon: HiServer, color: "#FF6600" },
     ],
     features: [
-      "Panel web en React con CRUD completo de empresas, categorías, cupones y promociones",
-      "Backend .NET 8 con Clean Architecture de 5 capas: BC, BW, DA, SG y API",
-      "Backend PHP con arquitectura en capas: Business, Data y Presentation",
-      "App móvil híbrida en Ionic + Angular con carrito de canje y geolocalización",
-      "Entity Framework Core con patrón Repository para acceso a datos en el backend .NET",
-      "Gestión de compras con detalle de canje e historial de transacciones del usuario",
+      "Arquitectura de microservicios distribuidos en .NET 8 con separación clara por dominios y responsabilidades",
+      "Integración con pasarelas de pago y manejo de transacciones QR con validación de Luhn",
+      "Implementación de flujo ISO 8583 para interoperabilidad con sistemas financieros y terminales de pago",
+      "Diseño orientado a trazabilidad, seguridad y alta disponibilidad para procesos críticos de finanzas",
+      "Despliegue y operación en Azure con foco en resiliencia, monitoreo y escalabilidad",
     ],
-    imageGroups: [
-      {
-        label: "Panel Administrador",
-        images: [
-          cuponesAdmin1, cuponesAdmin2, cuponesAdmin3, cuponesAdmin4,
-          cuponesAdmin5, cuponesAdmin6, cuponesAdmin7,
-        ],
-      },
-      {
-        label: "App Cliente",
-        images: [
-          cuponesClient1, cuponesClient2, cuponesClient3, cuponesClient4,
-          cuponesClient5, cuponesClient6, cuponesClient7, cuponesClient8,
-          cuponesClient9, cuponesClient10, cuponesClient11,
-        ],
-      },
-      {
-        label: "Portal Empresa",
-        images: [
-          cuponesEmpresa1, cuponesEmpresa2, cuponesEmpresa3,
-          cuponesEmpresa4, cuponesEmpresa5, cuponesEmpresa6,
-        ],
-      },
-    ],
+    imageGroups: [],
+    imagesRestricted: true,
   },
   {
     id: "gestion-hotelera",
@@ -290,7 +266,7 @@ export const projects: Project[] = [
       "Sistema hotelero completo con sitio web para clientes y panel administrativo en Angular 18, API REST en .NET 8 con arquitectura DDD y cuatro capas de dominio.",
     fullDescription:
       "Sistema integral de gestión hotelera compuesto por tres partes: un sitio web para clientes (Angular 18 + Google Maps), un panel administrativo (Angular 18 + Angular Material) y una API REST (.NET 8 + Entity Framework Core + SQL Server).\n\nEl sitio del cliente incluye un wizard de reservaciones multi-paso con verificación de disponibilidad en tiempo real y sugerencia de alternativas, galería de habitaciones, tarifas por tipo y temporada, mapa interactivo con Google Maps API y geolocalización, carruseles de ofertas y publicidad, y formulario de contacto. El panel administrativo permite gestionar y exportar reservaciones a PDF (jsPDF), controlar la disponibilidad de habitaciones por fecha, crear ofertas y promociones con rangos y descuentos, configurar precios por temporada alta, y editar el contenido de todas las páginas del sitio mediante un CMS integrado.\n\nEl backend se construyó con arquitectura orientada al dominio (DDD) con cuatro capas: API (controladores para Habitación, Reserva, Oferta, Publicidad, Temporada, Tarifas, Facilidad, Contacto y Autenticación), Aplicación (DTOs y servicios de aplicación), Dominio (entidades, interfaces y servicios de dominio) e Infraestructura (repositorios, persistencia con Entity Framework Core y seguridad). Desarrollado con metodología SCRUM.",
-    category: "academico",
+    category: "profesional",
     technologies: [
       { name: "Angular 18", icon: SiAngular, color: "#DD0031" },
       { name: ".NET 8 / C#", icon: SiDotnet, color: "#512BD4" },

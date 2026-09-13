@@ -74,16 +74,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <div className="p-6">
               <div className="mb-4 flex items-center gap-3">
                 <h2 className="text-2xl font-bold">{project.title}</h2>
-                <span
-                  className={`rounded-full px-3 py-1 text-xs font-medium ${
-                    project.category === "profesional"
-                      ? "bg-primary/10 text-primary"
-                      : "bg-accent/10 text-accent"
-                  }`}
-                >
-                  {project.category === "profesional"
-                    ? "Profesional"
-                    : "Academico"}
+                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  Profesional
                 </span>
               </div>
 

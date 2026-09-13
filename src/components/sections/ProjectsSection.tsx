@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 const filters = [
   { label: "Todos", value: "todos" },
   { label: "Profesional", value: "profesional" },
-  { label: "Academico", value: "academico" },
 ] as const;
 
 type FilterValue = (typeof filters)[number]["value"];
@@ -30,8 +29,8 @@ export default function ProjectsSection() {
     <section id="proyectos" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
-          title="Proyectos"
-          subtitle="Algunos de mis trabajos mas destacados"
+          title="Key Engineering Projects"
+          subtitle="Selected work across distributed systems, fintech, and enterprise platforms"
         />
 
         {/* Filters */}

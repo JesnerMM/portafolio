@@ -54,14 +54,8 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
           <h3 className="text-lg font-semibold transition-colors group-hover:text-primary">
             {project.title}
           </h3>
-          <span
-            className={`rounded-full px-2 py-0.5 text-xs ${
-              project.category === "profesional"
-                ? "bg-primary/10 text-primary"
-                : "bg-accent/10 text-accent"
-            }`}
-          >
-            {project.category === "profesional" ? "Profesional" : "Academico"}
+          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
+            Profesional
           </span>
         </div>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">
