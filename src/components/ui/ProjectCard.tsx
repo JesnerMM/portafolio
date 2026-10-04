@@ -18,10 +18,10 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="group cursor-pointer overflow-hidden rounded-[28px] border border-white/10 bg-slate-950/40 p-0 shadow-[0_20px_60px_rgba(15,23,42,0.38)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_30px_80px_rgba(6,182,212,0.12)]"
+      className="group cursor-pointer overflow-hidden border border-border bg-surface p-0 transition-colors duration-300 hover:border-primary/50"
       onClick={() => onOpen(project)}
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+      <div className="relative aspect-[16/10] overflow-hidden bg-surface-light">
         {project.imagesRestricted || project.imageGroups.length === 0 ? (
           <div className="flex h-full items-center justify-center text-text-secondary">
             <div className="text-center">
@@ -41,29 +41,29 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
           />
         )}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent opacity-70" />
 
         <div className="absolute inset-x-4 top-4 flex items-center justify-between">
-          <span className="rounded-full border border-white/10 bg-slate-950/60 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-200 backdrop-blur-sm">
+          <span className="border border-border bg-background/80 px-2.5 py-1 font-mono text-[10px] uppercase text-text backdrop-blur-sm">
             Project
           </span>
-          <span className="rounded-full bg-primary/15 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-primary backdrop-blur-sm">
+          <span className="bg-primary/15 px-2.5 py-1 font-mono text-[10px] uppercase text-primary backdrop-blur-sm">
             Professional
           </span>
         </div>
 
         <div className="absolute inset-x-4 bottom-4 flex items-center justify-between">
-          <span className="text-xs uppercase tracking-[0.18em] text-slate-300">
+          <span className="font-mono text-xs uppercase text-text">
             {project.technologies.length} techs
           </span>
-          <span className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition-colors group-hover:bg-primary group-hover:text-background">
+          <span className="border border-border bg-background/80 px-3 py-1.5 font-mono text-xs text-text backdrop-blur-sm transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-background">
             View Details
           </span>
         </div>
       </div>
 
       <div className="p-5">
-        <h3 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-primary">
+        <h3 className="mb-2 text-xl font-semibold text-text transition-colors group-hover:text-primary">
           {project.title}
         </h3>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">
@@ -75,7 +75,7 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
             <TechBadge key={tech.name} tech={tech} />
           ))}
           {project.technologies.length > 4 && (
-            <span className="inline-flex items-center rounded-full border border-white/10 bg-slate-900/70 px-2 py-1 text-[10px] uppercase tracking-[0.14em] text-text-secondary">
+            <span className="inline-flex items-center border border-border bg-background px-2 py-1 font-mono text-[10px] uppercase text-text-secondary">
               +{project.technologies.length - 4}
             </span>
           )}

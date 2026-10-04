@@ -78,12 +78,9 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Web3 & FinTech",
+    title: "Pagos & Seguridad",
     icon: HiShieldCheck,
     skills: [
-      { name: "Stellar Network", icon: HiShieldCheck, color: "#06B6D4" },
-      { name: "Freighter Wallet", icon: HiShieldCheck, color: "#22C55E" },
-      { name: "USDC Trustlines", icon: HiShieldCheck, color: "#14B8A6" },
       { name: "ISO 8583", icon: HiShieldCheck, color: "#F59E0B" },
       { name: "Firmas Criptográficas (RSA/SHA)", icon: HiShieldCheck, color: "#8B5CF6" },
     ],

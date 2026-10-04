@@ -1,31 +1,31 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Jesner Melgara | Full Stack Software Engineer | Web3 & Distributed Systems",
+  title: "Jesner Melgara | Ingeniero de Software Full Stack",
   description:
-    "Professional portfolio of Jesner Melgara - Full Stack Software Engineer focused on Web3, distributed systems, event-driven architectures, fintech integrations, and enterprise software engineering.",
+    "Portafolio profesional de Jesner Melgara, ingeniero de software Full Stack especializado en sistemas distribuidos, arquitecturas orientadas a eventos y soluciones empresariales.",
   keywords: [
     "Full Stack Software Engineer",
-    "Web3",
-    "Stellar",
     "Distributed Systems",
     "Next.js",
     "React",
     "Angular",
     ".NET",
     "TypeScript",
+    "Selenium",
     "Costa Rica",
     "CPIC",
   ],
@@ -39,9 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+      <body className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} antialiased`}>
         {children}
       </body>
     </html>

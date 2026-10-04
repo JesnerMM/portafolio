@@ -16,14 +16,14 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
       viewport={{ once: true }}
       className="mb-12 text-center"
     >
-      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-primary">
-        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+      <div className="mb-4 inline-flex items-center gap-2 border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase text-primary">
+        <span className="text-accent">//</span>
         Portfolio
       </div>
-      <h2 className="text-3xl font-black tracking-[-0.04em] text-white md:text-5xl">
+      <h2 className="text-3xl font-bold text-text md:text-5xl">
         {title}
       </h2>
-      <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-primary via-cyan-300 to-accent" />
+      <div className="mx-auto mt-4 h-px w-20 bg-primary" />
       {subtitle && (
         <p className="mx-auto mt-5 max-w-2xl text-base text-text-secondary md:text-lg">
           {subtitle}

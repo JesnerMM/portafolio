@@ -6,9 +6,9 @@ import { HiArrowDown, HiDownload } from "react-icons/hi";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const roles = [
-  "Full Stack Software Engineer | Web3 & Distributed Systems",
-  "Software Engineer • Event-Driven Architectures",
-  "Web3 & Distributed Systems",
+  "Full Stack Software Engineer",
+  "Event-Driven Systems Engineer",
+  "Distributed Systems Developer",
 ];
 
 export default function HeroSection() {
@@ -46,14 +46,8 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center justify-center px-4"
+      className="relative flex min-h-screen items-center justify-center px-4 pb-16 pt-28"
     >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute -right-1/4 bottom-1/4 h-96 w-96 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(6,182,212,0.12),_transparent_50%)]" />
-      </div>
-
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="text-left">
@@ -61,9 +55,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-6 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-primary"
+              className="mb-6 inline-flex items-center gap-3 border border-primary/40 bg-primary/5 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-primary"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(74,222,128,0.7)]" />
+              <span className="h-2 w-2 bg-primary" />
               {t.hero.badge}
             </motion.div>
 
@@ -80,7 +74,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mb-4 text-5xl font-black tracking-tight md:text-6xl xl:text-7xl"
+              className="mb-4 text-5xl font-bold md:text-6xl xl:text-7xl"
             >
               Jesner Melgara
             </motion.h1>
@@ -89,10 +83,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mb-8 min-h-12 font-mono text-lg text-text-secondary md:text-xl"
+              className="mb-8 min-h-12 font-mono text-sm text-text-secondary md:text-base"
             >
               <span>{text}</span>
-              <span className="ml-0.5 animate-pulse text-primary">|</span>
+              <span className="ml-1 animate-pulse text-primary">_</span>
             </motion.div>
 
             <motion.p
@@ -112,7 +106,7 @@ export default function HeroSection() {
             >
               <a
                 href="#proyectos"
-                className="rounded-lg bg-primary px-6 py-3 font-medium text-background transition-all hover:bg-primary-dark hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+                className="border border-primary bg-primary px-6 py-3 font-mono text-sm font-semibold text-background transition-colors hover:bg-primary-dark"
               >
                 {t.hero.ctaPrimary}
               </a>
@@ -120,7 +114,7 @@ export default function HeroSection() {
                 href="/Jesner-Melgara-CV.pdf"
                 download
                 target="_blank"
-                className="flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-6 py-3 font-medium text-primary transition-all hover:bg-primary/10"
+                className="flex items-center gap-2 border border-border px-6 py-3 font-mono text-sm text-text transition-colors hover:border-primary hover:text-primary"
               >
                 <HiDownload />
                 {t.hero.ctaSecondary}
@@ -134,23 +128,28 @@ export default function HeroSection() {
             transition={{ delay: 0.7 }}
             className="relative"
           >
-            <div className="rounded-3xl border border-border/80 bg-surface/80 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.45)] backdrop-blur-sm">
-              <div className="mb-6 flex items-center justify-between">
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-text-secondary">
-                  {t.hero.coreFocus}
-                </p>
-                <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[10px] font-medium text-primary">
-                  {t.hero.seniorProfile}
-                </span>
+            <div className="overflow-hidden border border-border bg-[#171915] shadow-[8px_8px_0_rgba(184,239,116,0.08)]">
+              <div className="flex items-center justify-between border-b border-border bg-surface px-4 py-3">
+                <div className="flex items-center gap-2 font-mono text-xs text-text-secondary">
+                  <span className="text-primary">●</span>
+                  <span>jesner@portfolio</span>
+                </div>
+                <span className="font-mono text-[10px] text-text-secondary">bash</span>
               </div>
 
-              <div className="mb-6 grid gap-3 sm:grid-cols-2">
+              <div className="space-y-3 p-5 font-mono text-xs sm:p-6 sm:text-sm">
+                <p className="text-primary"><span className="text-accent">~</span> $ whoami</p>
+                <p className="pl-4 text-text">{t.hero.seniorProfile}</p>
+                <p className="pt-2 text-primary"><span className="text-accent">~</span> $ cat focus.txt</p>
+              </div>
+
+              <div className="grid gap-px border-y border-border bg-border sm:grid-cols-2">
                 {t.hero.focusItems.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-border bg-background/60 px-3 py-3 text-sm text-text-secondary"
+                    className="bg-[#171915] px-4 py-3 font-mono text-xs text-text-secondary"
                   >
-                    {item}
+                    <span className="mr-2 text-primary">[+]</span>{item}
                   </div>
                 ))}
               </div>
@@ -159,23 +158,23 @@ export default function HeroSection() {
                 {t.hero.statValues.map((value, index) => (
                   <div
                     key={t.hero.statLabels[index]}
-                    className="rounded-2xl border border-border bg-background/50 p-3 text-center"
+                    className="border-r border-border p-3 text-center last:border-r-0"
                   >
-                    <div className="text-xl font-bold text-primary">{value}</div>
-                    <div className="mt-1 text-[11px] uppercase tracking-[0.12em] text-text-secondary">
+                    <div className="font-mono text-lg font-bold text-primary">{value}</div>
+                    <div className="mt-1 text-[9px] uppercase text-text-secondary">
                       {t.hero.statLabels[index]}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-4">
-                <p className="text-xs uppercase tracking-[0.2em] text-primary">{t.hero.selectedStack}</p>
+              <div className="p-5">
+                <p className="font-mono text-[10px] uppercase text-accent">{t.hero.selectedStack}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {t.hero.stackItems.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-primary/20 bg-background/50 px-2.5 py-1 text-xs text-text-secondary"
+                      className="border border-border px-2 py-1 font-mono text-[10px] text-text-secondary"
                     >
                       {item}
                     </span>
@@ -197,7 +196,7 @@ export default function HeroSection() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <HiArrowDown className="text-2xl text-text-secondary" />
+          <HiArrowDown className="text-2xl text-primary" />
         </motion.div>
       </motion.div>
     </section>

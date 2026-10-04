@@ -13,6 +13,7 @@ import {
   SiDotnet,
   SiPostgresql,
   SiDocker,
+  SiSelenium,
 } from "react-icons/si";
 import { HiShieldCheck, HiDatabase, HiServer } from "react-icons/hi";
 
@@ -36,12 +37,14 @@ export const experiences: ExperienceItem[] = [
       "Implementation of an event-driven architecture using Clean Architecture, Domain-Driven Design (DDD), and CQRS with RabbitMQ to process real-time events and automate port billing and settlement workflows.",
       "Data modeling in PostgreSQL and Oracle DB with Entity Framework Core, ensuring complete traceability of movements, restows, and dispatch operations.",
       "Development of web and mobile interfaces with Angular and Ionic Framework, including Docker-based deployment and containerization.",
+      "Automated browser tests with Selenium for key workflows in the port yard management system.",
     ],
     achievementsEs: [
       "Análisis, diseño y desarrollo de una plataforma crítica para la gestión de patios portuarios que cubre vehículos, contenedores y carga general.",
       "Implementación de una arquitectura orientada a eventos con Clean Architecture, Domain-Driven Design (DDD) y CQRS usando RabbitMQ para procesar eventos en tiempo real y automatizar flujos de facturación y liquidación portuaria.",
       "Modelado de datos en PostgreSQL y Oracle DB con Entity Framework Core, garantizando trazabilidad completa de movimientos, restows y operaciones de despacho.",
       "Desarrollo de interfaces web y móviles con Angular e Ionic Framework, incluyendo despliegues y contenedorización con Docker.",
+      "Automatización de pruebas en navegador con Selenium para flujos clave del sistema de gestión de patios portuarios.",
     ],
     technologies: [
       { name: "Angular", icon: SiAngular, color: "#DD0031" },
@@ -52,6 +55,7 @@ export const experiences: ExperienceItem[] = [
       { name: "Oracle DB", icon: HiDatabase, color: "#D91F26" },
       { name: "Docker", icon: SiDocker, color: "#2496ED" },
       { name: "Entity Framework", icon: HiDatabase, color: "#68217A" },
+      { name: "Selenium", icon: SiSelenium, color: "#43B02A" },
     ],
   },
   {

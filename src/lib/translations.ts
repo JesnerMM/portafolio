@@ -15,7 +15,7 @@ export const translations = {
       badge: "CPIC Member • Open to engineering opportunities",
       hello: "Hello, my name is",
       intro:
-        "Full Stack Software Engineer focused on event-driven architectures, high-availability backend systems, fintech integrations, and Web3 / Stellar solutions for critical enterprise environments.",
+        "Full Stack Software Engineer focused on event-driven architectures, high-availability backend systems, fintech integrations, and enterprise software solutions.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Download CV",
       coreFocus: "Core focus",
@@ -26,7 +26,7 @@ export const translations = {
       focusItems: [
         "Event-driven architecture",
         "Distributed systems",
-        "Web3 / Stellar",
+        "Process automation",
         "Fintech integration",
       ],
       stackItems: [
@@ -46,17 +46,17 @@ export const translations = {
       tags: [
         "Event-driven architectures",
         "Distributed systems",
-        "Web3 / Stellar",
+        "Process automation",
         "Fintech integrations",
       ],
       p1:
-        "I am Jesner Melgara, a Full Stack Software Engineer focused on Web3, distributed systems, event-driven architectures, and high-availability backend solutions. My experience spans React, Next.js, Angular, Ionic, Node.js, .NET / C#, PostgreSQL, Oracle DB, and deployments with Docker and Azure.",
+        "I am Jesner Melgara, a Full Stack Software Engineer focused on distributed systems, event-driven architectures, and high-availability backend solutions. My experience spans React, Next.js, Angular, Ionic, Node.js, .NET / C#, PostgreSQL, Oracle DB, and deployments with Docker and Azure.",
       p2:
-        "Active Collegiate Member of the CPIC (Colegio de Profesionales en Informática y Computación de Costa Rica), with a strong interest in critical systems, digital finance, payment infrastructure, process automation, and Web3 / Stellar ecosystems.",
+        "Active Collegiate Member of the CPIC (Colegio de Profesionales en Informática y Computación de Costa Rica), with a strong interest in critical systems, digital finance, payment infrastructure, and process automation.",
       p3:
         "I have worked on complex enterprise platforms, intelligent OCR systems, and port logistics solutions, always with a focus on quality, traceability, security, and scalability.",
       stats: [
-        { label: "Professional focus", value: "Web3 / Fintech" },
+        { label: "Professional focus", value: "Fintech & automation" },
         { label: "Critical systems", value: "6+" },
         { label: "CPIC", value: "Member" },
       ],
@@ -86,27 +86,12 @@ export const translations = {
       title: "Contact",
       subtitle: "Let’s talk about your project",
       infoTitle: "Contact Information",
-      formTitle: "Send a Message",
       labels: {
         email: "Email",
         phone: "Phone",
         location: "Location",
         linkedin: "LinkedIn",
-        name: "Name",
-        message: "Message",
       },
-      placeholders: {
-        name: "Your name",
-        email: "your@email.com",
-        message: "Tell me about your project...",
-      },
-      send: "Send Message",
-      sending: "Sending...",
-      success:
-        "Message sent successfully. I’ll get back to you soon.",
-      error:
-        "Something went wrong while sending. Please try again or contact me directly.",
-      sendMessage: "Send a Message",
     },
   },
   es: {
@@ -123,7 +108,7 @@ export const translations = {
       badge: "Miembro de CPIC • Abierto a oportunidades de ingeniería",
       hello: "Hola, mi nombre es",
       intro:
-        "Ingeniero de software Full Stack enfocado en arquitecturas orientadas a eventos, sistemas backend de alta disponibilidad, integraciones fintech y soluciones Web3 / Stellar para entornos empresariales críticos.",
+        "Ingeniero de software Full Stack enfocado en arquitecturas orientadas a eventos, sistemas backend de alta disponibilidad, integraciones fintech y soluciones empresariales.",
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Descargar CV",
       coreFocus: "Enfoque principal",
@@ -134,7 +119,7 @@ export const translations = {
       focusItems: [
         "Arquitectura orientada a eventos",
         "Sistemas distribuidos",
-        "Web3 / Stellar",
+        "Automatización de procesos",
         "Integración fintech",
       ],
       stackItems: [
@@ -154,17 +139,17 @@ export const translations = {
       tags: [
         "Arquitecturas orientadas a eventos",
         "Sistemas distribuidos",
-        "Web3 / Stellar",
+        "Automatización de procesos",
         "Integraciones fintech",
       ],
       p1:
-        "Soy Jesner Melgara, Ingeniero de Software Full Stack enfocado en Web3, sistemas distribuidos, arquitecturas orientadas a eventos y soluciones backend de alta disponibilidad. Mi experiencia abarca React, Next.js, Angular, Ionic, Node.js, .NET / C#, PostgreSQL, Oracle DB y despliegues con Docker y Azure.",
+        "Soy Jesner Melgara, Ingeniero de Software Full Stack enfocado en sistemas distribuidos, arquitecturas orientadas a eventos y soluciones backend de alta disponibilidad. Mi experiencia abarca React, Next.js, Angular, Ionic, Node.js, .NET / C#, PostgreSQL, Oracle DB y despliegues con Docker y Azure.",
       p2:
-        "Miembro colegiado activo del CPIC (Colegio de Profesionales en Informática y Computación de Costa Rica), con gran interés en sistemas críticos, finanzas digitales, infraestructura de pagos, automatización de procesos y ecosistemas Web3 / Stellar.",
+        "Miembro colegiado activo del CPIC (Colegio de Profesionales en Informática y Computación de Costa Rica), con gran interés en sistemas críticos, finanzas digitales, infraestructura de pagos y automatización de procesos.",
       p3:
         "He trabajado en plataformas empresariales complejas, sistemas inteligentes de OCR y soluciones logísticas portuarias, siempre con enfoque en calidad, trazabilidad, seguridad y escalabilidad.",
       stats: [
-        { label: "Enfoque profesional", value: "Web3 / Fintech" },
+        { label: "Enfoque profesional", value: "Fintech y automatización" },
         { label: "Sistemas críticos", value: "6+" },
         { label: "CPIC", value: "Miembro" },
       ],
@@ -194,26 +179,12 @@ export const translations = {
       title: "Contacto",
       subtitle: "Hablemos sobre tu proyecto",
       infoTitle: "Información de contacto",
-      formTitle: "Enviar mensaje",
       labels: {
         email: "Correo",
         phone: "Teléfono",
         location: "Ubicación",
         linkedin: "LinkedIn",
-        name: "Nombre",
-        message: "Mensaje",
       },
-      placeholders: {
-        name: "Tu nombre",
-        email: "tu@email.com",
-        message: "Cuéntame sobre tu proyecto...",
-      },
-      send: "Enviar mensaje",
-      sending: "Enviando...",
-      success: "Mensaje enviado correctamente. Te responderé pronto.",
-      error:
-        "Hubo un problema al enviar el mensaje. Inténtalo de nuevo o contáctame directamente.",
-      sendMessage: "Enviar mensaje",
     },
   },
 } as const;
