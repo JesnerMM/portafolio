@@ -32,7 +32,7 @@ export default function EducationSection() {
 
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold text-white">
-                  University of Costa Rica
+                  {t.education.university}
                 </h3>
 
                 <p className="mt-1 text-lg text-primary">

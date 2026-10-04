@@ -14,6 +14,7 @@ export interface ImageGroup {
 export interface Project {
   id: string;
   title: string;
+  titleEs?: string;
   shortDescription: string;
   fullDescription: string;
   category: "profesional";
@@ -32,7 +33,7 @@ export interface TechItem {
 }
 
 export interface SkillCategory {
-  title: string;
+  title: { en: string; es: string };
   icon: IconType;
   skills: TechItem[];
 }

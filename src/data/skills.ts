@@ -32,7 +32,7 @@ import { HiServer, HiDatabase, HiCode, HiCog, HiShieldCheck } from "react-icons/
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Backend & Arquitectura",
+    title: { en: "Backend & Architecture", es: "Backend & Arquitectura" },
     icon: HiServer,
     skills: [
       { name: ".NET / C#", icon: SiDotnet, color: "#512BD4" },
@@ -47,7 +47,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Frontend & Mobile",
+    title: { en: "Frontend & Mobile", es: "Frontend & Móvil" },
     icon: HiCode,
     skills: [
       { name: "React", icon: SiReact, color: "#61DAFB" },
@@ -65,7 +65,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Bases de Datos & ORM",
+    title: { en: "Databases & ORMs", es: "Bases de datos & ORM" },
     icon: HiDatabase,
     skills: [
       { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
@@ -78,7 +78,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Pagos & Seguridad",
+    title: { en: "Payments & Security", es: "Pagos & Seguridad" },
     icon: HiShieldCheck,
     skills: [
       { name: "ISO 8583", icon: HiShieldCheck, color: "#F59E0B" },
@@ -86,7 +86,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "DevOps & Cloud",
+    title: { en: "DevOps & Cloud", es: "DevOps & Nube" },
     icon: HiCog,
     skills: [
       { name: "Git", icon: SiGit, color: "#F05032" },

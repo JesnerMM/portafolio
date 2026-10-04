@@ -5,14 +5,9 @@ import { motion } from "motion/react";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
-const roles = [
-  "Full Stack Software Engineer",
-  "Event-Driven Systems Engineer",
-  "Distributed Systems Developer",
-];
-
 export default function HeroSection() {
   const { t } = useLanguage();
+  const roles = t.hero.roles;
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,7 +36,7 @@ export default function HeroSection() {
     }, speed);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex]);
+  }, [text, isDeleting, roleIndex, roles]);
 
   return (
     <section

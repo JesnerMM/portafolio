@@ -6,7 +6,7 @@ import { skillCategories } from "@/data/skills";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function SkillsSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="habilidades" className="px-4 py-20">
@@ -21,7 +21,7 @@ export default function SkillsSection() {
             const CategoryIcon = category.icon;
             return (
               <motion.div
-                key={category.title}
+                key={category.title.en}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: catIndex * 0.1 }}
@@ -32,7 +32,9 @@ export default function SkillsSection() {
                   <div className="rounded-xl border border-primary/20 bg-primary/10 p-2.5">
                     <CategoryIcon className="text-xl text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{category.title}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {category.title[language]}
+                  </h3>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">

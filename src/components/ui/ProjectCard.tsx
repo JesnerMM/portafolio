@@ -3,8 +3,9 @@
 import { motion } from "motion/react";
 import { Project } from "@/types";
 import TechBadge from "./TechBadge";
-import { HiEye, HiLockClosed } from "react-icons/hi";
+import { HiLockClosed } from "react-icons/hi";
 import Image from "next/image";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,6 +13,9 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
+  const { t, language } = useLanguage();
+  const title = language === "es" && project.titleEs ? project.titleEs : project.title;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -27,14 +31,14 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
             <div className="text-center">
               <HiLockClosed className="mx-auto mb-2 text-3xl text-primary/30" />
               <span className="text-xs uppercase tracking-[0.18em] text-text-secondary">
-                Images restricted
+                {t.projects.imagesRestricted}
               </span>
             </div>
           </div>
         ) : (
           <Image
             src={project.imageGroups[0].images[0]}
-            alt={project.title}
+            alt={title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 400px"
@@ -45,26 +49,26 @@ export default function ProjectCard({ project, onOpen }: ProjectCardProps) {
 
         <div className="absolute inset-x-4 top-4 flex items-center justify-between">
           <span className="border border-border bg-background/80 px-2.5 py-1 font-mono text-[10px] uppercase text-text backdrop-blur-sm">
-            Project
+            {t.projects.projectLabel}
           </span>
           <span className="bg-primary/15 px-2.5 py-1 font-mono text-[10px] uppercase text-primary backdrop-blur-sm">
-            Professional
+            {t.projects.professionalLabel}
           </span>
         </div>
 
         <div className="absolute inset-x-4 bottom-4 flex items-center justify-between">
           <span className="font-mono text-xs uppercase text-text">
-            {project.technologies.length} techs
+            {project.technologies.length} {t.projects.technologyCountLabel}
           </span>
           <span className="border border-border bg-background/80 px-3 py-1.5 font-mono text-xs text-text backdrop-blur-sm transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-background">
-            View Details
+            {t.projects.viewDetails}
           </span>
         </div>
       </div>
 
       <div className="p-5">
         <h3 className="mb-2 text-xl font-semibold text-text transition-colors group-hover:text-primary">
-          {project.title}
+          {title}
         </h3>
         <p className="mb-4 text-sm leading-relaxed text-text-secondary">
           {project.shortDescription}

@@ -2,6 +2,7 @@ export type Language = "en" | "es";
 
 export const translations = {
   en: {
+    portfolioLabel: "Portfolio",
     nav: [
       { label: "Home", href: "#inicio" },
       { label: "About", href: "#sobre-mi" },
@@ -12,6 +13,11 @@ export const translations = {
       { label: "Contact", href: "#contacto" },
     ],
     hero: {
+      roles: [
+        "Full Stack Software Engineer",
+        "Event-Driven Systems Engineer",
+        "Distributed Systems Developer",
+      ],
       badge: "CPIC Member • Open to engineering opportunities",
       hello: "Hello, my name is",
       intro:
@@ -69,6 +75,26 @@ export const translations = {
       title: "Key Engineering Projects",
       subtitle:
         "Selected work across distributed systems, fintech, and enterprise platforms",
+      projectLabel: "Project",
+      professionalLabel: "Professional",
+      technologyCountLabel: "technologies",
+      viewDetails: "View details",
+      imagesRestricted: "Images restricted",
+      imagesUnavailable: "Images not available",
+      imagePermission:
+        "The company did not grant permission to display screenshots of the system.",
+      keyFeatures: "Key features",
+      technologiesUsed: "Technologies used",
+      close: "Close",
+      previousImage: "Previous image",
+      nextImage: "Next image",
+      goToImage: "Go to image",
+      screenshot: "screenshot",
+      imageGroups: {
+        system: "System",
+        clientWebsite: "Client website",
+        adminPanel: "Admin panel",
+      },
     },
     skills: {
       title: "Skills",
@@ -77,6 +103,7 @@ export const translations = {
     education: {
       title: "Education",
       subtitle: "My academic background",
+      university: "University of Costa Rica",
       degreeTitle: "Business Informatics Bachelor's Degree",
       period: "2021 - 2025",
       description:
@@ -95,6 +122,7 @@ export const translations = {
     },
   },
   es: {
+    portfolioLabel: "Portafolio",
     nav: [
       { label: "Inicio", href: "#inicio" },
       { label: "Sobre mí", href: "#sobre-mi" },
@@ -105,6 +133,11 @@ export const translations = {
       { label: "Contacto", href: "#contacto" },
     ],
     hero: {
+      roles: [
+        "Ingeniero de Software Full Stack",
+        "Ingeniero de sistemas orientados a eventos",
+        "Desarrollador de sistemas distribuidos",
+      ],
       badge: "Miembro de CPIC • Abierto a oportunidades de ingeniería",
       hello: "Hola, mi nombre es",
       intro:
@@ -162,6 +195,26 @@ export const translations = {
       title: "Proyectos clave de ingeniería",
       subtitle:
         "Trabajos seleccionados en sistemas distribuidos, fintech y plataformas empresariales",
+      projectLabel: "Proyecto",
+      professionalLabel: "Profesional",
+      technologyCountLabel: "tecnologías",
+      viewDetails: "Ver detalles",
+      imagesRestricted: "Imágenes restringidas",
+      imagesUnavailable: "Imágenes no disponibles",
+      imagePermission:
+        "La empresa no autorizó mostrar capturas de pantalla del sistema.",
+      keyFeatures: "Características principales",
+      technologiesUsed: "Tecnologías utilizadas",
+      close: "Cerrar",
+      previousImage: "Imagen anterior",
+      nextImage: "Imagen siguiente",
+      goToImage: "Ir a la imagen",
+      screenshot: "captura de pantalla",
+      imageGroups: {
+        system: "Sistema",
+        clientWebsite: "Sitio para clientes",
+        adminPanel: "Panel de administración",
+      },
     },
     skills: {
       title: "Habilidades",
@@ -170,6 +223,7 @@ export const translations = {
     education: {
       title: "Educación",
       subtitle: "Mi formación académica",
+      university: "Universidad de Costa Rica",
       degreeTitle: "Licenciatura en Informática Empresarial",
       period: "2021 - 2025",
       description:

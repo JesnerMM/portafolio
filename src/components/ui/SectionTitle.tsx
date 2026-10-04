@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 interface SectionTitleProps {
   title: string;
@@ -8,6 +9,8 @@ interface SectionTitleProps {
 }
 
 export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +21,7 @@ export default function SectionTitle({ title, subtitle }: SectionTitleProps) {
     >
       <div className="mb-4 inline-flex items-center gap-2 border border-primary/30 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase text-primary">
         <span className="text-accent">//</span>
-        Portfolio
+        {t.portfolioLabel}
       </div>
       <h2 className="text-3xl font-bold text-text md:text-5xl">
         {title}

@@ -139,6 +139,7 @@ export const projects: Project[] = [
   {
     id: "ocr-aeromar",
     title: "Intelligent OCR Data Reading System",
+    titleEs: "Sistema inteligente de lectura de datos con OCR",
     shortDescription:
       "Document digitization platform built from scratch for Aeromar, including a full web interface, RSA-JWT authentication, and role-based access control.",
     fullDescription:
@@ -235,6 +236,7 @@ export const projects: Project[] = [
   {
     id: "microservicios-pagos-qr",
     title: "Microservices with QR Payments and ISO 8583 Protocol",
+    titleEs: "Microservicios de pagos QR con protocolo ISO 8583",
     shortDescription:
       "Distributed microservices architecture in .NET 8 for QR payments, Luhn validation, gateway integration, and Azure deployment.",
     fullDescription:
@@ -262,6 +264,7 @@ export const projects: Project[] = [
   {
     id: "gestion-hotelera",
     title: "Hotel Management System",
+    titleEs: "Sistema de gestión hotelera",
     shortDescription:
       "Complete hotel management system with a client website and admin panel in Angular 18, plus a REST API in .NET 8 with DDD architecture and four domain layers.",
     fullDescription:

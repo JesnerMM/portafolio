@@ -6,6 +6,7 @@ import { Project } from "@/types";
 import TechBadge from "./TechBadge";
 import ImageCarousel from "./ImageCarousel";
 import { HiX, HiCheckCircle } from "react-icons/hi";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -13,6 +14,11 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const { t, language } = useLanguage();
+  const title = project && language === "es" && project.titleEs
+    ? project.titleEs
+    : project?.title ?? "";
+
   useEffect(() => {
     if (project) {
       document.body.style.overflow = "hidden";
@@ -58,7 +64,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <button
               onClick={onClose}
               className="absolute right-4 top-4 z-10 rounded-full bg-background/80 p-2 text-text-secondary backdrop-blur-sm transition-colors hover:text-primary"
-              aria-label="Cerrar"
+              aria-label={t.projects.close}
             >
               <HiX className="text-xl" />
             </button>
@@ -66,16 +72,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Carousel */}
             <ImageCarousel
               groups={project.imageGroups}
-              title={project.title}
+              title={title}
               restricted={project.imagesRestricted}
             />
 
             {/* Content */}
             <div className="p-6">
               <div className="mb-4 flex items-center gap-3">
-                <h2 className="text-2xl font-bold">{project.title}</h2>
+                <h2 className="text-2xl font-bold">{title}</h2>
                 <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                  Professional
+                  {t.projects.professionalLabel}
                 </span>
               </div>
 
@@ -86,7 +92,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {/* Features */}
               <div className="mb-6">
                 <h3 className="mb-3 text-lg font-semibold text-primary">
-                  Key Features
+                  {t.projects.keyFeatures}
                 </h3>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {project.features.map((feature, i) => (
@@ -104,7 +110,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {/* Technologies */}
               <div>
                 <h3 className="mb-3 text-lg font-semibold text-primary">
-                  Technologies Used
+                  {t.projects.technologiesUsed}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
